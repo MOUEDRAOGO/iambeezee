@@ -25,7 +25,7 @@ const MongoClient = mongo.MongoClient;
 
 // const MongoClient = mongo.MongoClient;
 //const url = "mongodb://localhost:27017/iambeezeedb";
- const url = "mongodb://admin:admin1@ds119374.mlab.com:19374/iambeezee"; url mLab
+const url = "mongodb://admin:admin1@ds119374.mlab.com:19374/iambeezee"; 
 
 //mongod.exe --dbpath=H:\MOUEDRAOGO\atelier_reseau_social\novembre_reseau_social\data
 
