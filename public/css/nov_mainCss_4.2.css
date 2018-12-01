@@ -1,0 +1,232 @@
+
+    
+    /****************************
+
+    ************ ALL ************
+    
+    ****************************/
+    
+    /* @font-face{ 
+        font-family: 'Raleway-Regular';
+        src: url('WebFont.eot');
+        src: url('../02_assets/charte_graphique/fonts/Raleway-Regular.tt') format('truetype');
+             
+        src: url('WebFont.eot?#iefix') format('embedded-opentype'),
+             url('WebFont.woff') format('woff'),
+             url('../02_assets/charte_graphique/fonts/Raleway-Regular.tt') format('truetype'),
+             url('WebFont.svg#webfont') format('svg');
+    } */
+    
+    body{
+        font-family: 'Raleway-Regular',Arial,sans-serif;
+        width: auto;
+        /* height: 2500px; */
+		margin: 0;
+        padding: 0;
+        /* background-color: yellow; */
+    }
+
+    .rs-no-padding{
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    .rs-no-margin{
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+
+
+    
+/* auto resize image */
+.rs-imageResize{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit:cover;
+    top: 0px;
+    left: 0px;
+    padding: 0;
+    bottom: 0;
+}
+
+
+#rs-li-border-0-225{
+    border: 1px solid rgba(0,0,0,0.225) !important;
+}
+
+#id-scrollbar-style::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+	border-radius: 10px;
+	background-color: #CCCCCC;
+}
+
+#id-scrollbar-style::-webkit-scrollbar{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#id-scrollbar-style::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-color: #D62929;
+	background-image: -webkit-linear-gradient(90deg,
+	transparent,rgba(0, 0, 0, 0.4) 50%,transparent,
+	transparent)
+}
+
+
+
+/* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+
+/* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
+
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+iframe,
+object,
+embed,
+video {
+    max-width: 100%;
+}
+
+/* conserver le ratio des images */
+
+img {
+    height: auto;
+}
+
+/* gestion des mots longs */
+
+textarea,
+table,
+td,
+th,
+code,
+pre,
+samp {
+    -webkit-hyphens: auto; /* césure propre */
+    -moz-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word; /* passage à la ligne forcé */
+}
+
+code,
+pre,
+samp {
+    white-space: pre-wrap; /* passage à la ligne spécifique pour les éléments à châsse fixe */
+}
+
+/* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+
+.element1,
+.element2 {
+    float: none;
+    width: auto;
+}
+
+/* masquer les éléments superflus */
+
+.hide_mobile {
+    display: none !important;
+}
+
+
+/*****************************
+
+******* MAIN CONTAINER *******
+
+*****************************/
+
+#rs-main-container{
+
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+
+    /* background-color: rgb(0, 255, 0); */
+    /* background-color: rgb(255, 0, 0); */
+}
+
+
+#rs-main-container * {
+float: left 
+}
+
+
+
+
+/*****************************
+
+******* cookies CONTAINER *******
+
+*****************************/
+
+#rs-cookies-container{
+    display: none;
+}
+
+
+
+
+
+/*****************************
+
+******* rs-main-section *******
+
+*****************************/
+
+
+#rs-main-section{
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: green; */
+    border: black solid 0.5px;
+}
+
+
+
+
+
+/*****************************
+
+******* rs-middleBloc *******
+
+*****************************/
+
+#rs-middleBloc {
+    height: auto;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: grey; */
+    border: black solid 0.5px;
+
+    /* position: fixed; */
+    /* overflow-y: scroll; */
+}
+
+

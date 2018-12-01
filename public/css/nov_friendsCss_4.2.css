@@ -1,0 +1,96 @@
+/************************* CSS DE LA PAGE FRIENDS RESEAU SOCIAL friends_reseausocial.html *******************************************************************/
+
+
+
+#rs-friends-container{
+    height: auto;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    margin-bottom: 20px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+}
+
+#rs-friends-title {
+    height: 50px;
+    font-size: 1rem;
+
+}
+#rs-friends-title-badge {
+    font-size: 1.5rem;
+    padding-left: 9px;
+    margin-left: 14px;
+    margin-top: 7px;
+}
+
+#rs-friends-list{
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+
+}
+#rs-friends-item{
+    height: 150px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+#rs-friends-item-pic{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+
+    
+
+    /* background-image: url('https://loremflickr.com/320/150/faceportrait'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit:cover;
+}
+
+#rs-friends-item-content{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+#rs-friends-item-surname, #rs-friends-item-name{
+    font-size: 1.5rem;
+}
+
+#rs-friends-item-mutualFriends h1, #rs-friends-item-commonPlace h1, #rs-friends-item-commonActivity h1{
+    font-size: 1rem;
+}
+
+#rs-friends-mutualFriends-nbr, #rs-friends-commonPlace-nbr, #rs-friends-commonActivity-nbr{
+    font-size: 1rem;
+}
+
+#rs-friends-state-onoffline:hover{
+    color: blue;
+
+}
+#rs-friends-state-msg, #rs-friends-state-chat, #rs-friends-state-delete{
+    border: yellow solid 0.5px;
+    color: yellow;
+}
+
+#rs-friends-state-msg:hover, #rs-friends-state-chat:hover, #rs-friends-state-delete:hover{
+    border:white solid 0.5px;
+    color: white;
+    background-color: red;
+}

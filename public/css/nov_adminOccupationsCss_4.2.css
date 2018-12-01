@@ -1,0 +1,380 @@
+
+/************************* CSS DE LA PAGE ADMIN OCCUPATIONS  *******************************************************************/
+
+
+
+
+
+
+/*****************************
+
+* ADMIN IDENTITY OCCUPATIONS *
+
+*****************************/
+
+#rs-admin-identity-occupations-container{
+    height: auto;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    margin-bottom: 20px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+
+}
+
+#rs-admin-identity-occupations-title{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+
+}
+
+#rs-admin-identity-occupations-specs{
+    /* width: 100%; */
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    margin-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+
+#rs-admin-identity-occupations-logo{
+    /* width: 100%; */
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+
+#rs-admin-account-occupations-logo{
+    /* width: 100%; */
+    height: 200px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+    overflow: hidden;
+    object-fit:cover;
+
+    /* background-image: url('https://loremflickr.com/1200/400/portrait'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 0.5px; 
+
+}
+
+
+#rs-admin-occupations-btn-delete{
+    border: yellow solid 0.5px;
+    color: yellow;
+    float: right;
+}
+
+#rs-admin-occupations-btn-delete:hover{
+    border:white solid 0.5px;
+    color: white;
+    background-color: red;
+}
+
+/* rs-preferences-occupations-container */
+
+#rs-admin-preferences-occupations-container{
+    height: 125px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+
+}
+
+#rs-admin-preferences-occupations-options{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+
+
+
+#rs-admin-occupations-focusBloc-img-container{
+
+    height: 475x;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 20px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    overflow: hidden;
+    object-fit:cover;
+
+  
+}
+#rs-admin-occupations-focusBloc-img{
+    height: 400px;
+    /* background-image: url('https://loremflickr.com/1200/400/museum'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 0.5px; 
+
+}
+
+#rs-admin-occupation-statsBloc{
+    height: 900px;
+}
+
+
+#rs-admin-occupation-focusBloc-description-text{
+    height: 385px;
+    margin-bottom: 20px !important;
+}
+
+#rs-admin-occupation-focusBloc-description-text h1{
+    font-size: 1rem;
+}
+
+#rs-admin-occupation-focusBloc-description-text-formControl{
+    height: 300px !important;
+}
+
+
+#rs-occupation-duration{
+	height: 100%;
+    background-color: beige;
+    margin-bottom: 20px;
+
+}
+
+#rs-occupation-duration-search-text h1{
+    font-size: 1rem;
+    padding-top: 5px;
+}
+
+select {
+    padding-top: 24px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#rs-occupation-duration-hourBloc{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#rs-occupation-duration-hourData{
+    padding-left: 30px;
+}
+
+#rs-occupation-duration-hourBloc h1{
+    font-size: 1rem;
+    padding-top: 5px;
+}
+
+#rs-occupation-duration-minuteBloc{
+    /* left: 5px; */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#rs-occupation-duration-minuteData{
+    padding-left: 30px;
+}
+#rs-occupation-duration-minuteBloc h1{
+    font-size: 1rem;
+    padding-top: 5px;
+}
+
+#rs-admin-occupations-statsBloc-view, #rs-admin-occupations-statsBloc-like, #rs-admin-occupations-statsBloc-clients{
+    height: 50px;
+    margin-bottom: 20px !important;
+}
+
+/* #rs-admin-occupations-statsBloc-view h1, #rs-admin-occupations-statsBloc-like h1, #rs-admin-occupations-statsBloc-clients h1{
+    font-size: 1rem;
+} */
+
+#rs-admin-occupations-statsBloc-view-btn, #rs-admin-occupations-statsBloc-like-btn, #rs-admin-occupations-statsBloc-clients-btn{
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#rs-admin-occupations-statsBloc-view-badge, #rs-admin-occupations-statsBloc-like-badge, #rs-admin-occupations-statsBloc-clients-badge{
+    top: 5px !important;
+    left: 715px;
+    font-size: 1rem;
+}
+
+#rs-focusBloc-description-price{
+
+    font-size: 1.5rem;
+    margin-bottom: 60px !important;
+}
+
+#rs-focusBloc-description-price h1{
+    font-size: 1rem;
+}
+
+#rs-focusBloc-description-price-listGroup{
+    left: 0px;
+    top: 29px;
+}
+
+#rs-focusBloc-description-price-badge{
+    top: opx;
+    /* left: 800px; */
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+#rs-admin-occupation-statsBloc-title{
+    font-size: 1rem;
+}
+
+
+
+
+/*****************************
+
+* ADMIN OCCUPATIONS friends- container *
+
+*****************************/
+
+
+
+#rs-adminOccupations-friends-container{
+    height: 571px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    margin-bottom: 20px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+
+}
+
+#rs-adminOccupations-friends-title {
+    height: 50px;
+    font-size: 1rem;
+
+}
+#rs-adminOccupations-friends-title-badge {
+    font-size: 1.5rem;
+    padding-left: 9px;
+    margin-left: 14px;
+    margin-top: 7px;
+}
+
+#rs-adminOccupations-friends-list{
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+    /* overflow: auto; */
+    overflow-y: auto
+
+}
+#rs-adminOccupations-friends-item{
+    height: 105px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+#rs-adminOccupations-friends-item-pic{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+
+    
+
+    /* background-image: url('https://loremflickr.com/320/150/faceportrait'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit:cover;
+}
+
+#rs-adminOccupations-friends-item-content{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+#rs-adminOccupations-friends-item-surname, #rs-adminOccupations-friends-item-name{
+    font-size: 1.5rem;
+}
+
+#rs-adminOccupations-friends-item-mutualFriends h1, #rs-adminOccupations-friends-item-commonPlace h1, #rs-adminOccupations-friends-item-commonActivity h1{
+    font-size: 0.8rem;
+}
+
+#rs-adminOccupations-friends-mutualFriends-nbr, #rs-adminOccupations-friends-commonPlace-nbr, #rs-adminOccupations-friends-commonActivity-nbr{
+    font-size: 0.8rem;
+}
+
+#rs-adminOccupations-friends-item-state{
+    padding-left: 5px;
+}
+
+#rs-adminOccupations-friends-state-onoffline:hover{
+    color: blue;
+
+}
+#rs-adminOccupations-friends-state-message, #rs-adminOccupations-friends-state-chat, #rs-adminOccupations-friends-state-delete{
+    border: blue 0.5px;
+    color: blue;
+    font-size: 0.8rem;
+}
+
+#rs-adminOccupations-friends-state-message:hover, #rs-adminOccupations-friends-state-chat:hover, #rs-adminOccupations-friends-state-delete:hover{
+    border:white solid 0.5px;
+    color: white;
+    background-color: red;
+}
+
+/*  */
+
+#rs-adminOccupations-comment-container{
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+#rs-adminOccupations-comment-container h1{
+    font-size: 2.5rem;
+}

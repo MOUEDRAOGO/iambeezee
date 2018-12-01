@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RESEAU SOCIAL IFOCOP V1.0</title>
+
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./css/reseausocial_4.1.css" rel="stylesheet">
+    <link href="./bootstrap-multiselect.css" rel="stylesheet">
+
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="../reseausocial_4.1.js"></script>
+
+    <script src="./popper.min.js"></script>
+    <script src="./tooltip.min.js"></script>
+    <script src="./bootstrap-select.js"></script>
+    <script src="./bootstrap-multiselect.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin=""></script>
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
+    <script type='text/javascript' src='https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js'></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+
+
+    <!-- <script src="dist/jquery.spinner.js"></script> -->
+
+    <!-- ma cle APi Google maps -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb65cfaJuG2hcgZ4Q2qvo7emOzcqiAL0U" async defer></script>  -->
+
+    <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script> -->
+
+    <!-- &callback=initMap -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- templating des documents html -->
+    <script>
+        $(function () {
+            $("#includedNavbar").load("./shared/nov_navbar_4.2.html");
+        });
+
+        $(function () {
+            $("#includedAsideAccount").load("./shared/nov_asideAccount_4.2.html");
+        });
+
+        $(function () {
+            $("#includedAsideFriends").load("./shared/nov_asideFriends_4.2.html");
+        });
+
+        $(function () {
+            $("#includedFooter").load("./shared/nov_footer_4.2.html");
+        });
+
+    </script>
+
+
+    <!-- MAIN CONTAINER -->
+    <section id="rs-main-container" class="rs-main-container col-md-12 container-fluid">
+
+        <!-- NAV CONTAINER -->
+
+        <div id="includedNavbar" class="col-md-12 rs-no-padding rs-no-margin"></div>
+
+        <!-- end of NAV CONTAINER -->
+
+
+        <!-- MAIN SECTION -->
+        <section id="rs-main-section" class="rs-main-section col-md-12">
+
+
+
+
+            <!-- rs-aside-account -->
+
+            <div id="includedAsideAccount" class="col-md-2 rs-no-padding rs-no-margin"></div>
+
+            <!-- of rs-aside-account -->
+
+            <!-- rs-middleBloc -->
+            <div id="rs-middleBloc" class="rs-middleBloc col-md-8 rs-no-padding">
+                <!--***************************************************** CONTENU SPECIFIQUE A CETTE PAGE **************************************************-->
+
+                <div id="rs-profil-container" class="rs-profil-container col-md-12 rs-no-margin rs-no-padding">
+                    <div id="rs-profil-commentBloc" class="col-md-12">
+                        <h1>Ecrivez un commentaire à "nomdel'ami"</h1>
+                        <form class="form-search form-inline">
+                            <div class="input-append">
+                                <input id="rs-profil-commentBloc-input" type="text" class="search-query" placeholder="Ecrivez ici votre commentaire" />
+                                <button type="submit" id="rs-profil-commentBloc-btn" class="btn btn-primary">Publier</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="rs-profil-mainTitle" class="rs-profil-mainTitle col-md-12">
+                        <h1>PROFIL</h1>
+                    </div>
+                    <!-- rs-profil-identification -->
+                    <div id="rs-profil-identification-container" class="rs-profil-identification-container col-md-12 rs-no-margin rs-no-padding">
+                        <!-- rs-profil-pic-container -->
+                        <div id="rs-profil-pic-container" class="rs-profil-pic-container col-md-3">
+                            <div id="rs-profil-pic" class="rs-profil-pic col-md-12"></div>
+                            <!-- l image provient du fichier uploadé -->
+                            <div id="rs-profil-pic-action" class="rs-profil-pic-action col-md-12">
+                                <button type="button" id="rs-profil-pic-action-invit" class="btn btn-outline-primary col-md-12">inviter</button>
+                                <button type="button" id="rs-profil-pic-action-delete" class="btn btn-outline-secondary col-md-12">Supprimer</button>
+                                <button type="button" id="rs-profil-pic-action-send" class="btn btn-outline-success col-md-12">envoyer
+                                    un message</button>
+                                <button type="button" id="rs-profil-pic-action-chat" class="btn btn-outline-danger col-md-12">chat</button>
+                                <button type="button" id="rs-profil-pic-action-warning" class="btn btn-outline-warning col-md-12">Warning</button>
+                            </div>
+                        </div>
+                        <!-- end of rs-profil-pic-container -->
+
+                        <div id="rs-profil-specs" class="rs-profil-specs col-md-9">
+                            <div id="rs-profil-naming" class="rs-profil-naming col-md-12">
+                                <div id="rs-profil-surname" class="rs-profil-surname col-md-6">JOHN</div>
+                                <div id="rs-profil-name" class="rs-profil-name col-md-6">DOE</div>
+
+                            </div>
+
+
+
+                            <div id="rs-profil-preferences" class="rs-profil-preferences col-md-12">
+                                <label for="profil-preferences" class="col-md-12">PREFERENCES</label>
+
+                                restaurants sports <br> culture
+
+                            </div>
+
+                            <div id="rs-profil-activity-history" class="rs-profil-activity-history col-md-12 rs-no-padding">
+
+                                <div id="rs-history-btnA" class="rs-history-btnA text-left col-md-3">
+                                    <h1>Activités réalisées</h1>
+                                    <span id="rs-history-badge" class="rs-history-badge badge badge-light">142</span>
+                                </div>
+
+                                <div id="rs-history-btnB" class="rs-history-btnB text-left col-md-3">
+                                    <h1>Lieux visités</h1>
+                                    <span id="rs-history-badge" class="rs-history-badge badge badge-light">142</span>
+                                </div>
+
+                                <div id="rs-history-btnC" class="rs-history-btnC text-left col-md-3">
+                                    <h1>Amis</h1>
+                                    <span id="rs-history-badge" class="rs-history-badge badge badge-light">142</span>
+                                </div>
+
+                                <!-- <button type="button" class="rs-history-btnA btn btn-primary text-left  col-md-4">
+                                    Activités réalisées <span id="rs-history-badge" class="rs-history-badge badge badge-light">142</span>
+                                </button>
+                                <button type="button" class="rs-history-btnB btn btn-primary text-left col-md-4">
+                                    Lieux visités<span id="rs-history-badge" class="rs-history-badge badge badge-light">142</span>
+                                </button>
+                                <button type="button" class="rs-history-btnC btn btn-primary text-left col-md-4">
+                                    Amis <span id="rs-history-badge" class="rs-history-badge badge badge-light">142</span>
+                                </button> -->
+
+                            </div>
+                            <!-- end of rs-profil-activity-history -->
+
+
+                        </div>
+                        <!-- end of rs-profil-specs -->
+
+
+
+                    </div>
+                    <!-- end of rs-profil-identification-container -->
+
+                    <div id="rs-profil-favoriteOccupations-container" class="rs-profil-favoriteOccupations-container col-md-12 rs-no-padding id-scrollbar-style ">
+                        <div id="rs-profil-favoriteOccupationsTop-title" class="rs-profil-favoriteOccupationsTop-title col-md-12">
+                            <h1>Tes occupations favorites :</h1>
+                        </div>
+
+                        <!--  rs-profil-favoriteOccupationsTop -->
+
+                        <div id="rs-profil-favoriteOccupationsTop " class="rs-profil-favoriteOccupationsTop col-md-12 rs-no-padding">
+
+                            <div id="rs-profil-favoriteOccupationsTop-containerA" class="rs-profil-favoriteOccupationsTop-containerA col-md-2">
+                                <div id="rs-profil-favoriteOccupationsTop-imageA" class="rs-profil-favoriteOccupationsTop-imageA col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsTop-textA" class="rs-profil-favoriteOccupationsTop-textA col-md-12">
+                                    <div id="rs-profil-favoriteOccupationsTop-textName" class="rs-profil-favoriteOccupationsTop-textName col-md-12 rs-no-padding text-center">
+                                        <h1>Zoo de Vincennes</h1>
+                                    </div>
+
+                                    <div id="rs-profil-favoriteOccupationsTop-duration-container" class="rs-profil-favoriteOccupationsTop-duration-container col-md-12 rs-no-padding">
+                                        <div id="rs-profil-favoriteOccupationsTop-duration" class="rs-profil-favoriteOccupationsTop-duration col-md-6 rs-no-padding">
+                                            <h1>Durée(mn) :</h1>
+                                        </div>
+                                        <div id="rs-profil-favoriteOccupationsTop-duration-time" class="rs-profil-favoriteOccupationsTop-duration-time col-md-6 rs-no-padding">
+                                            <h1>90</h1>
+                                        </div>
+                                    </div>
+                                    <ul id="rs-profil-favoriteOccupationsTop-listGroup" class="rs-profil-favoriteOccupationsTop-listGroup list-group col-md-12 rs-no-padding">
+                                        <!-- A GARDER <li class="rs-favoriteOccupationsTop-itemMembersParticipation list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                                    <h1>membres ayant participé :</h1>
+                                                    <span class="rs-favoriteOccupationsTop-itemMembersParticipation-badge badge badge-primary badge-pill">1350</span>
+                                                </li>       -->
+                                        <li id="rs-profil-favoriteOccupationsTop-itemMutualOcupations" class="rs-profil-favoriteOccupationsTop-itemMutualOcupations list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                            <h1>Amis commun :</h1>
+                                            <span id="rs-profil-favoriteOccupationsTop-itemMutualOcupations-badge"
+                                                class="rs-profil-favoriteOccupationsTop-itemMutualOcupations-badge badge badge-primary badge-pill">3</span>
+                                        </li>
+                                    </ul>
+
+                                    <button type="button" id="rs-profil-favoriteOccupationsTop-duration-choice" class="rs-profil-favoriteOccupationsTop-duration-choice btn btn-primary text-left rs-no-margin">
+                                        CHOISIR
+                                    </button>
+
+                                </div>
+                            </div>
+
+
+                            <div id="rs-profil-favoriteOccupationsTop-containerB" class="rs-profil-favoriteOccupationsTop-containerA col-md-2">
+                                <div id="rs-profil-favoriteOccupationsTop-imageB" class="rs-profil-favoriteOccupationsTop-imageA col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsTop-textB" class="rs-profil-favoriteOccupationsTop-textA col-md-12">
+                                    <div id="rs-profil-favoriteOccupationsTop-textName" class="rs-profil-favoriteOccupationsTop-textName col-md-12 rs-no-padding text-center">
+                                        <h1>Zoo de Vincennes</h1>
+                                    </div>
+
+                                    <div id="rs-profil-favoriteOccupationsTop-duration-container" class="rs-profil-favoriteOccupationsTop-duration-container col-md-12 rs-no-padding">
+                                        <div id="rs-profil-favoriteOccupationsTop-duration" class="rs-profil-favoriteOccupationsTop-duration col-md-6 rs-no-padding">
+                                            <h1>Durée(mn) :</h1>
+                                        </div>
+                                        <div id="rs-profil-favoriteOccupationsTop-duration-time" class="rs-profil-favoriteOccupationsTop-duration-time col-md-6 rs-no-padding">
+                                            <h1>90</h1>
+                                        </div>
+                                    </div>
+                                    <ul id="rs-profil-favoriteOccupationsTop-listGroup" class="rs-profil-favoriteOccupationsTop-listGroup list-group col-md-12 rs-no-padding">
+                                        <!-- A GARDER <li class="rs-favoriteOccupationsTop-itemMembersParticipation list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                                    <h1>membres ayant participé :</h1>
+                                                    <span class="rs-favoriteOccupationsTop-itemMembersParticipation-badge badge badge-primary badge-pill">1350</span>
+                                                </li>       -->
+                                        <li id="rs-profil-favoriteOccupationsTop-itemMutualOcupations" class="rs-profil-favoriteOccupationsTop-itemMutualOcupations list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                            <h1>Amis commun :</h1>
+                                            <span id="rs-profil-favoriteOccupationsTop-itemMutualOcupations-badge"
+                                                class="rs-profil-favoriteOccupationsTop-itemMutualOcupations-badge badge badge-primary badge-pill">3</span>
+                                        </li>
+                                    </ul>
+
+                                    <button type="button" id="rs-profil-favoriteOccupationsTop-duration-choice" class="rs-profil-favoriteOccupationsTop-duration-choice btn btn-primary text-left rs-no-margin">
+                                        CHOISIR
+                                    </button>
+
+                                </div>
+                            </div>
+
+
+                            <div id="rs-profil-favoriteOccupationsTop-containerC" class="rs-profil-favoriteOccupationsTop-containerA col-md-2">
+                                <div id="rs-profil-favoriteOccupationsTop-imageC" class="rs-profil-favoriteOccupationsTop-imageA col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsTop-textC" class="rs-profil-favoriteOccupationsTop-textA col-md-12">
+                                    <div id="rs-profil-favoriteOccupationsTop-textName" class="rs-profil-favoriteOccupationsTop-textName col-md-12 rs-no-padding text-center">
+                                        <h1>Zoo de Vincennes</h1>
+                                    </div>
+
+                                    <div id="rs-profil-favoriteOccupationsTop-duration-container" class="rs-profil-favoriteOccupationsTop-duration-container col-md-12 rs-no-padding">
+                                        <div id="rs-profil-favoriteOccupationsTop-duration" class="rs-profil-favoriteOccupationsTop-duration col-md-6 rs-no-padding">
+                                            <h1>Durée(mn) :</h1>
+                                        </div>
+                                        <div id="rs-profil-favoriteOccupationsTop-duration-time" class="rs-profil-favoriteOccupationsTop-duration-time col-md-6 rs-no-padding">
+                                            <h1>90</h1>
+                                        </div>
+                                    </div>
+                                    <ul id="rs-profil-favoriteOccupationsTop-listGroup" class="rs-profil-favoriteOccupationsTop-listGroup list-group col-md-12 rs-no-padding">
+                                        <!-- A GARDER <li class="rs-favoriteOccupationsTop-itemMembersParticipation list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                                    <h1>membres ayant participé :</h1>
+                                                    <span class="rs-favoriteOccupationsTop-itemMembersParticipation-badge badge badge-primary badge-pill">1350</span>
+                                                </li>       -->
+                                        <li id="rs-profil-favoriteOccupationsTop-itemMutualOcupations" class="rs-profil-favoriteOccupationsTop-itemMutualOcupations list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                            <h1>Amis commun :</h1>
+                                            <span id="rs-profil-favoriteOccupationsTop-itemMutualOcupations-badge"
+                                                class="rs-profil-favoriteOccupationsTop-itemMutualOcupations-badge badge badge-primary badge-pill">3</span>
+                                        </li>
+                                    </ul>
+
+                                    <button type="button" id="rs-profil-favoriteOccupationsTop-duration-choice" class="rs-profil-favoriteOccupationsTop-duration-choice btn btn-primary text-left rs-no-margin">
+                                        CHOISIR
+                                    </button>
+
+                                </div>
+                            </div>
+
+
+                            <div id="rs-profil-favoriteOccupationsTop-containerD" class="rs-profil-favoriteOccupationsTop-containerA col-md-2">
+                                <div id="rs-profil-favoriteOccupationsTop-imageD" class="rs-profil-favoriteOccupationsTop-imageA col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsTop-textD" class="rs-profil-favoriteOccupationsTop-textA col-md-12">
+                                    <div id="rs-profil-favoriteOccupationsTop-textName" class="rs-profil-favoriteOccupationsTop-textName col-md-12 rs-no-padding text-center">
+                                        <h1>Zoo de Vincennes</h1>
+                                    </div>
+
+                                    <div id="rs-profil-favoriteOccupationsTop-duration-container" class="rs-profil-favoriteOccupationsTop-duration-container col-md-12 rs-no-padding">
+                                        <div id="rs-profil-favoriteOccupationsTop-duration" class="rs-profil-favoriteOccupationsTop-duration col-md-6 rs-no-padding">
+                                            <h1>Durée(mn) :</h1>
+                                        </div>
+                                        <div id="rs-profil-favoriteOccupationsTop-duration-time" class="rs-profil-favoriteOccupationsTop-duration-time col-md-6 rs-no-padding">
+                                            <h1>90</h1>
+                                        </div>
+                                    </div>
+                                    <ul id="rs-profil-favoriteOccupationsTop-listGroup" class="rs-profil-favoriteOccupationsTop-listGroup list-group col-md-12 rs-no-padding">
+                                        <!-- A GARDER <li class="rs-favoriteOccupationsTop-itemMembersParticipation list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                                    <h1>membres ayant participé :</h1>
+                                                    <span class="rs-favoriteOccupationsTop-itemMembersParticipation-badge badge badge-primary badge-pill">1350</span>
+                                                </li>       -->
+                                        <li id="rs-profil-favoriteOccupationsTop-itemMutualOcupations" class="rs-profil-favoriteOccupationsTop-itemMutualOcupations list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                            <h1>Amis commun :</h1>
+                                            <span id="rs-profil-favoriteOccupationsTop-itemMutualOcupations-badge"
+                                                class="rs-profil-favoriteOccupationsTop-itemMutualOcupations-badge badge badge-primary badge-pill">3</span>
+                                        </li>
+                                    </ul>
+
+                                    <button type="button" id="rs-profil-favoriteOccupationsTop-duration-choice" class="rs-profil-favoriteOccupationsTop-duration-choice btn btn-primary text-left rs-no-margin">
+                                        CHOISIR
+                                    </button>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!--  end of rs-profil-favoriteOccupationsTop -->
+
+                        <!--  rs-profil-favoriteOccupationsMiddle -->
+
+                        <div id="rs-profil-favoriteOccupationsTop-duration-choice" class="rs-profil-favoriteOccupationsMiddle col-md-12 rs-no-padding">
+
+                            <div id="rs-profil-favoriteOccupationsMiddle-containerA" class="rs-profil-favoriteOccupationsMiddle-containerA col-md-2">
+                                <div id="rs-profil-favoriteOccupationsMiddle-imageA" class="rs-profil-favoriteOccupationsMiddle-imageA col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsMiddle-textA" class="rs-profil-favoriteOccupationsMiddle-textA col-md-12">
+
+                                    <div id="rs-favoriteOccupationsMiddle-textName" class="rs-favoriteOccupationsMiddle-textName col-md-12 rs-no-padding text-center">
+                                        <h1>Zoo de Vincennes</h1>
+                                    </div>
+
+                                    <div id="rs-favoriteOccupationsMiddle-duration-container" class="rs-favoriteOccupationsMiddle-duration-container col-md-12 rs-no-padding">
+                                        <div id="rs-favoriteOccupationsMiddle-duration" class="rs-favoriteOccupationsMiddle-duration col-md-6 rs-no-padding">
+                                            <h1>Durée(mn) :</h1>
+                                        </div>
+                                        <div id="rs-favoriteOccupationsMiddle-duration-time" class="rs-favoriteOccupationsMiddle-duration-time col-md-6 rs-no-padding">
+                                            <h1>90</h1>
+                                        </div>
+                                    </div>
+                                    <ul id="rs-favoriteOccupationsMiddle-listGroup" class="rs-favoriteOccupationsMiddle-listGroup list-group col-md-12 rs-no-padding">
+                                        <!-- A GARDER <li class="rs-favoriteOccupationsMiddle-itemMembersParticipation list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                                        <h1>membres ayant participé :</h1>
+                                                        <span class="rs-favoriteOccupationsMiddle-itemMembersParticipation-badge badge badge-primary badge-pill">1350</span>
+                                                    </li>       -->
+                                        <li id="rs-favoriteOccupationsMiddle-itemMutualOcupations " class="rs-favoriteOccupationsMiddle-itemMutualOcupations list-group-item d-flex justify-content-between align-items-center rs-no-padding">
+                                            <h1>Amis commun :</h1>
+                                            <span id="rs-favoriteOccupationsMiddle-itemMutualOcupations-badge" class="rs-favoriteOccupationsMiddle-itemMutualOcupations-badge badge badge-primary badge-pill">3</span>
+                                        </li>
+                                    </ul>
+
+                                    <button type="button" id="rs-favoriteOccupationsMiddle-duration-choice" class="rs-favoriteOccupationsMiddle-duration-choice btn btn-primary text-left rs-no-margin">
+                                        CHOISIR
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="rs-profil-favoriteOccupationsMiddle-containerB" class="rs-profil-favoriteOccupationsMiddle-containerB col-md-2">
+                                <div id="rs-profil-favoriteOccupationsMiddle-imageB" class="rs-profil-favoriteOccupationsMiddle-imageB col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsMiddle-textB" class="rs-profil-favoriteOccupationsMiddle-textB col-md-12">
+
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="rs-profil-favoriteOccupationsMiddle-containerC" class="rs-profil-favoriteOccupationsMiddle-containerC col-md-2">
+                                <div id="rs-profil-favoriteOccupationsMiddle-imageC" class="rs-profil-favoriteOccupationsMiddle-imageC col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsMiddle-textC" class="rs-profil-favoriteOccupationsMiddle-textC col-md-12">
+
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="rs-profil-favoriteOccupationsMiddle-containerD" class="rs-profil-favoriteOccupationsMiddle-containerD col-md-2">
+                                <div id="rs-profil-favoriteOccupationsMiddle-imageD" class="rs-profil-favoriteOccupationsMiddle-imageD col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsMiddle-textD" class="rs-profil-favoriteOccupationsMiddle-textD col-md-12">
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <!--  end of rs-profil-favoriteOccupationsMiddle -->
+
+
+
+                        <!--  rs-profil-favoriteOccupationsBottom -->
+
+                        <div id="rs-profil-favoriteOccupationsBottom" class="rs-profil-favoriteOccupationsBottom col-md-12 rs-no-padding">
+
+                            <div id="rs-profil-favoriteOccupationsBottom-containerA" class="rs-profil-favoriteOccupationsBottom-containerA col-md-2">
+                                <div id="rs-profil-favoriteOccupationsBottom-imageA" class="rs-profil-favoriteOccupationsBottom-imageA col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsBottom-textA" class="rs-profil-favoriteOccupationsBottom-textA col-md-12">
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="rs-profil-favoriteOccupationsBottom-containerB" class="rs-profil-favoriteOccupationsBottom-containerB col-md-2">
+                                <div id="rs-profil-favoriteOccupationsBottom-imageB" class="rs-profil-favoriteOccupationsBottom-imageB col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsBottom-textB" class="rs-profil-favoriteOccupationsBottom-textB col-md-12">
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="rs-profil-favoriteOccupationsBottom-containerC" class="rs-profil-favoriteOccupationsBottom-containerC col-md-2">
+                                <div id="rs-profil-favoriteOccupationsBottom-imageC" class="rs-profil-favoriteOccupationsBottom-imageC col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsBottom-textC" class="rs-profil-favoriteOccupationsBottom-textC col-md-12">
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="rs-profil-favoriteOccupationsBottom-containerD" class="rs-profil-favoriteOccupationsBottom-containerD col-md-2">
+                                <div id="rs-profil-favoriteOccupationsBottom-imageD" class="rs-profil-favoriteOccupationsBottom-imageD col-md-12">
+
+                                </div>
+                                <div id="rs-profil-favoriteOccupationsBottom-textD" class="rs-profil-favoriteOccupationsBottom-textD col-md-12">
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                        <!--  end of rs-profil-favoriteOccupationsBottom -->
+
+                    </div>
+                    <!--  end of rs-profil-favoriteOccupations-container -->
+
+
+
+                    <div id="rs-profil-activity" class="rs-profil-activity col-md-12">
+                        <h1>ACTIVITE</h1>
+                    </div>
+
+
+                    <!--***************************************************** FRIENDS **************************************************-->
+
+                    <!-- rs-profil-friends-container -->
+                    <div id="rs-profil-friends-container" class="rs-profil-friends-container col-md-12 rs-no-margin rs-no-padding">
+
+                        <div id="rs-profil-friends-title" class="rs-profil-friends-title col-md-12">
+                            <h1>AMIS</h1>
+                            <span id="rs-profil-friends-title-badge" class="rs-profil-friends-title-badge badge badge-primary badge-pill">142</span>
+
+                        </div>
+
+                        <!-- DOIT S AFFICHER ICI EN DYNAMIQUE la liste d amis dans un ordre alphabetique croissant -->
+
+                        <div class="rs-profil-friends-list col-md-12 " id="id-scrollbar-Style">
+
+                            <div id="rs-profil-friends-item" class="rs-profil-friends-item col-md-6">
+                                <div id="rs-profil-friends-item-pic" class="rs-profil-friends-item-pic col-md-3">
+
+                                </div>
+                                <div id="rs-profil-friends-item-content" class="rs-profil-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                    <div id="rs-profil-friends-item-surname" class="rs-profil-friends-item-surname col-md-6 ">Prénom</div>
+                                    <div id="rs-profil-friends-item-name" class="rs-profil-friends-item-name col-md-6">Nom</div>
+                                    <div id="rs-profil-friends-item-mutualFriends" class="rs-profil-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-mutualFriends-nbr" class="rs-profil-friends-mutualFriends-nbr col-md-3">7</div>
+                                        <h1 id="rs-profil-friends-mutualFriends-text" class="rs-profil-friends-mutualFriends-text col-md-9">
+                                            ami(s) en commun</h1>
+                                    </div>
+                                    <div id="rs-profil-friends-item-commonPlace" class="rs-profil-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-commonPlace-nbr" class="rs-profil-friends-commonPlace-nbr col-md-3">3</div>
+                                        <h1 id="rs-profil-friends-commonPlace-text" class="rs-profil-friends-commonPlace-text col-md-9">
+                                            lieu(x) en commun</h1>
+                                    </div>
+                                    <div id="rs-profil-friends-item-commonActivity" class="rs-profil-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-commonActivity-nbr" class="rs-profil-friends-commonActivity-nbr col-md-3">5</div>
+                                        <h1 id="rs-profil-friends-commonActivity-text" class="rs-profil-friends-commonActivity-text col-md-9">
+                                            activité(s) en commun</h1>
+                                    </div>
+                                </div>
+                                <div id="rs-profil-friends-item-state" class="rs-profil-friends-item-state col-md-3">
+                                    <div id="rs-profil-friends-state-onoffline" class="rs-profil-friends-state-onoffline col-md-12">Online</div>
+                                    <div class="rs-profil-friends-state-msg" class="rs-profil-friends-state-msg col-md-12">MESSAGE</div>
+                                    <div class="rs-profil-friends-state-chat" class="rs-profil-friends-state-chat col-md-12">CHAT</div>
+                                    <div class="rs-profil-friends-state-delete" class="rs-profil-friends-state-delete col-md-12">SUPPRIMER</div>
+                                </div>
+
+                            </div>
+                            <div id="rs-profil-friends-item" class="rs-profil-friends-item col-md-6">
+                                <div id="rs-profil-friends-item-pic" class="rs-profil-friends-item-pic col-md-3">
+
+                                </div>
+                                <div id="rs-profil-friends-item-content" class="rs-profil-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                    <div id="rs-profil-friends-item-surname" class="rs-profil-friends-item-surname col-md-6 ">Prénom</div>
+                                    <div id="rs-profil-friends-item-name" class="rs-profil-friends-item-name col-md-6">Nom</div>
+                                    <div id="rs-profil-friends-item-mutualFriends" class="rs-profil-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-mutualFriends-nbr" class="rs-profil-friends-mutualFriends-nbr col-md-3">7</div>
+                                        <h1 id="rs-profil-friends-mutualFriends-text" class="rs-profil-friends-mutualFriends-text col-md-9">
+                                            ami(s) en commun</h1>
+                                    </div>
+                                    <div id="rs-profil-friends-item-commonPlace" class="rs-profil-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-commonPlace-nbr" class="rs-profil-friends-commonPlace-nbr col-md-3">3</div>
+                                        <h1 id="rs-profil-friends-commonPlace-text" class="rs-profil-friends-commonPlace-text col-md-9">
+                                            lieu(x) en commun</h1>
+                                    </div>
+                                    <div id="rs-profil-friends-item-commonActivity" class="rs-profil-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-commonActivity-nbr" class="rs-profil-friends-commonActivity-nbr col-md-3">5</div>
+                                        <h1 id="rs-profil-friends-commonActivity-text" class="rs-profil-friends-commonActivity-text col-md-9">
+                                            activité(s) en commun</h1>
+                                    </div>
+                                </div>
+                                <div id="rs-profil-friends-item-state" class="rs-profil-friends-item-state col-md-3">
+                                    <div id="rs-profil-friends-state-onoffline" class="rs-profil-friends-state-onoffline col-md-12">Online</div>
+                                    <div class="rs-profil-friends-state-delete" class="rs-profil-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                                </div>
+
+                            </div>
+                            <div id="rs-profil-friends-item" class="rs-profil-friends-item col-md-6">
+                                <div id="rs-profil-friends-item-pic" class="rs-profil-friends-item-pic col-md-3"></div>
+                                <div id="rs-profil-friends-item-content" class="rs-profil-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                    <div id="rs-profil-friends-item-surname" class="rs-profil-friends-item-surname col-md-6 ">Prénom</div>
+                                    <div id="rs-profil-friends-item-name" class="rs-profil-friends-item-name col-md-6">Nom</div>
+                                    <div id="rs-profil-friends-item-mutualFriends" class="rs-profil-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-mutualFriends-nbr" class="rs-profil-friends-mutualFriends-nbr col-md-3">7</div>
+                                        <h1 id="rs-profil-friends-mutualFriends-text" class="rs-profil-friends-mutualFriends-text col-md-9">
+                                            ami(s) en commun</h1>
+                                    </div>
+                                    <div id="rs-profil-friends-item-commonPlace" class="rs-profil-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-commonPlace-nbr" class="rs-profil-friends-commonPlace-nbr col-md-3">3</div>
+                                        <h1 id="rs-profil-friends-commonPlace-text" class="rs-profil-friends-commonPlace-text col-md-9">
+                                            lieu(x) en commun</h1>
+                                    </div>
+                                    <div id="rs-profil-friends-item-commonActivity" class="rs-profil-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-commonActivity-nbr" class="rs-profil-friends-commonActivity-nbr col-md-3">5</div>
+                                        <h1 id="rs-profil-friends-commonActivity-text" class="rs-profil-friends-commonActivity-text col-md-9">
+                                            activité(s) en commun</h1>
+                                    </div>
+                                </div>
+                                <div id="rs-profil-friends-item-state" class="rs-profil-friends-item-state col-md-3">
+                                    <div id="rs-profil-friends-state-onoffline" class="rs-profil-friends-state-onoffline col-md-12">Online</div>
+                                    <div class="rs-profil-friends-state-delete" class="rs-profil-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                                </div>
+
+                            </div>
+                            <div id="rs-profil-friends-item" class="rs-profil-friends-item col-md-6">
+                                <div id="rs-profil-friends-item-pic" class="rs-profil-friends-item-pic col-md-3">
+
+                                </div>
+                                <div id="rs-profil-friends-item-content" class="rs-profil-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                    <div id="rs-profil-friends-item-surname" class="rs-profil-friends-item-surname col-md-6 ">Prénom</div>
+                                    <div id="rs-profil-friends-item-name" class="rs-profil-friends-item-name col-md-6">Nom</div>
+                                    <div id="rs-profil-friends-item-mutualFriends" class="rs-profil-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-mutualFriends-nbr" class="rs-profil-friends-mutualFriends-nbr col-md-3">7</div>
+                                        <h1 id="rs-profil-friends-mutualFriends-text" class="rs-profil-friends-mutualFriends-text col-md-9">
+                                            ami(s) en commun</h1>
+                                    </div>
+                                    <div id="rs-profil-friends-item-commonPlace" class="rs-profil-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-commonPlace-nbr" class="rs-profil-friends-commonPlace-nbr col-md-3">3</div>
+                                        <h1 id="rs-profil-friends-commonPlace-text" class="rs-profil-friends-commonPlace-text col-md-9">
+                                            lieu(x) en commun</h1>
+                                    </div>
+                                    <div id="rs-profil-friends-item-commonActivity" class="rs-profil-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                        <div id="rs-profil-friends-commonActivity-nbr" class="rs-profil-friends-commonActivity-nbr col-md-3">5</div>
+                                        <h1 id="rs-profil-friends-commonActivity-text" class="rs-profil-friends-commonActivity-text col-md-9">
+                                            activité(s) en commun</h1>
+                                    </div>
+                                </div>
+                                <div id="rs-profil-friends-item-state" class="rs-profil-friends-item-state col-md-3">
+                                    <div id="rs-profil-friends-state-onoffline" class="rs-profil-friends-state-onoffline col-md-12">Online</div>
+                                    <div class="rs-profil-friends-state-delete" class="rs-profil-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+                    <!-- end of rs-profil-friends-container -->
+
+                </div>
+                <!-- end of rs-profil-container -->
+
+
+
+
+                <div id="rs-friends-recommendationSend" class="rs-friends-recommendationSend">
+                    <h1>Recommandation envoyée !</h1>
+                    <!-- <h1>Votre recommandation à "nomdumembre" a été envoyée !</h1> -->
+                </div>
+
+
+                <div id="rs-members-invitationSend" class="rs-members-invitationSend">
+                    <h1>Invitation envoyée !</h1>
+                    <!-- <h1>Votre invitation à "nomdumembre" a été envoyée !</h1> -->
+                </div>
+
+                <div id="rs-identification-friends-invitationSend" class="rs-identification-friends-invitationSend">
+                    <h1>Invitation envoyée !</h1>
+                    <!-- <h1>Votre invitation à "nomdumembre" a été envoyée !</h1> -->
+                </div>
+
+                <!--***************************************************** end of CONTENU SPECIFIQUE A CETTE PAGE **************************************************-->
+            </div>
+            <!-- end of rs-middleBloc -->
+
+
+
+            <!-- rs-aside-friends -->
+
+            <div id="includedAsideFriends" class="col-md-2 rs-no-padding rs-no-margin"></div>
+
+            <!-- end of rs-aside-friends -->
+
+
+        </section>
+        <!-- end of MAIN SECTION -->
+
+
+
+        <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER  -->
+
+        <div id="includedFooter" class="col-md-12 rs-no-padding rs-no-margin"></div>
+
+        <!-- END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER   -->
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <!-- END MAIN CONTAINER -->
+
+</body>
+
+</html>

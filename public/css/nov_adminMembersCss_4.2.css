@@ -1,0 +1,579 @@
+/************************* CSS DE LA PAGE ADMIN MEMBERS  *******************************************************************/
+
+
+
+
+
+
+/*****************************
+
+**** rs-admin-business-container *******
+
+*****************************/
+
+#rs-admin-business-container{
+    height: 1030px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: grey; */
+    border: black solid 0.5px;
+}
+
+#rs-admin-asideBusiness-title h1{
+    font-size: 2rem;
+}
+
+#rs-admin-business-input-group{
+    padding-left: 15px;
+}
+
+/* #rs-admin-business-input-group::placeholder{
+    padding-left: 15px;
+} */
+
+#rs-admin-aside-business{
+    height: 250px;
+    overflow-y: auto;
+    border: black solid 1px;
+}
+
+
+
+
+/*****************************
+
+* ADMIN IDENTITY *
+
+*****************************/
+
+#rs-admin-identity-container{
+    height: auto;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    margin-bottom: 20px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+
+}
+
+#rs-admin-identity-title{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+
+}
+
+#rs-admin-identity-specs{
+    /* width: 100%; */
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    margin-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+
+#rs-admin-identity-pic{
+    /* width: 100%; */
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+
+#rs-admin-account-pic{
+    /* width: 100%; */
+    height: 300px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+    overflow: hidden;
+    object-fit:cover;
+
+    /* background-image: url('https://loremflickr.com/1200/400/portrait'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 0.5px; 
+
+}
+
+
+#rs-admin-btn-delete{
+    border: yellow solid 0.5px;
+    color: yellow;
+    float: right;
+}
+
+#rs-admin-btn-delete:hover{
+    border:white solid 0.5px;
+    color: white;
+    background-color: red;
+}
+
+/* rs-preferences-container */
+
+#rs-admin-preferences-container{
+    height: 125px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+
+}
+
+#rs-admin-preferences-options{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+
+
+/*****************************
+
+* ADMIN PROFIL *
+
+*****************************/
+
+
+#rs-admin-profil-container{
+    height: auto;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    margin-bottom: 20px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+}
+
+#rs-admin-profil-mainTitle{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px;
+
+}
+
+#rs-admin-profil-mainTitle h1{
+    height: 100%;
+   font-size: 2rem;
+}
+
+
+#rs-admin-profil-commentBloc{
+
+    margin-bottom: 20px;
+    background-color: beige;
+}
+
+#rs-admin-profil-commentBloc h1{
+    font-size: 1rem;
+    padding-top: 17px;
+}
+
+
+.input { 
+    text-align: left; 
+}
+
+#rs-admin-profil-commentBloc-input {
+    padding-left: 0px;
+    width: 800px;
+}
+#rs-admin-profil-commentBloc-input placeholder {
+    padding-left: 185px;
+}
+
+/* .form.form-search {
+    position: relative;
+    top: 11px;
+    padding-left: 65px;
+} */
+
+/* form.form-search:before {
+    content:'';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url(http://getbootstrap.com/2.3.2/assets/img/glyphicons-halflings.png);
+    background-position: -48px 0;
+    position: absolute;
+    top:8px;
+    left:70px;
+    opacity: .5;
+    z-index: 1000;
+} */
+
+
+
+
+
+#rs-admin-profil-pic-container{
+    /* width: 100%; */
+    height: 250px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 20px;
+    border: black solid 0.5px; 
+
+}
+
+
+#rs-admin-profil-specs{
+    height: 250px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 20px;
+    border: black solid 0.5px; 
+}
+
+#rs-admin-profil-naming{
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+}
+
+#rs-admin-profil-surname{
+    top: 25px;
+    font-size: 2rem;
+}
+
+#rs-admin-profil-name{
+    top: 25px;
+    font-size: 2rem;
+}
+
+
+#rs-admin-profil-preferences{
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+}
+
+#rs-admin-profil-activity-history{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+#rs-history-btnA{
+    /* margin-left: 10px;
+    margin-right: 5px; */
+}
+
+#rs-history-btnB{
+    /* margin-left: 5px;
+    margin-right: 5px; */
+}
+
+#rs-history-btnC{
+    /* margin-left: 5px;
+    margin-right: 10px; */
+}
+
+
+
+
+#rs-admin-profil-activity{
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+    overflow-y: auto;
+
+}
+
+#rs-admin-profil-activity-history h1{
+    font-size: 1.5rem;
+    height: 30px;
+}
+
+#rs-admin-history-btn{
+    width: 227px;
+    font-size: 1.5rem;
+    
+
+}
+
+#rs-admin-history-badge{
+    margin-top: 3px;
+    margin-left: 6px;
+    font-size: 1rem;
+}
+
+/*****************************
+
+* ADMIN friends- container *
+
+*****************************/
+
+
+
+#rs-admin-friends-container{
+    height: 571px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    margin-bottom: 20px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+
+}
+
+#rs-admin-friends-title {
+    height: 50px;
+    font-size: 1rem;
+
+}
+#rs-admin-friends-title-badge {
+    font-size: 1.5rem;
+    padding-left: 9px;
+    margin-left: 14px;
+    margin-top: 7px;
+}
+
+#rs-admin-friends-list{
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+    /* overflow: auto; */
+    overflow-y: auto
+
+}
+#rs-admin-friends-item{
+    height: 105px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+#rs-admin-friends-item-pic{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+
+    
+
+    /* background-image: url('https://loremflickr.com/320/150/faceportrait'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit:cover;
+}
+
+#rs-admin-friends-item-content{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+#rs-admin-friends-item-surname, #rs-admin-friends-item-name{
+    font-size: 1.5rem;
+}
+
+#rs-admin-friends-item-mutualFriends h1, #rs-admin-friends-item-commonPlace h1, #rs-admin-friends-item-commonActivity h1{
+    font-size: 0.8rem;
+}
+
+#rs-admin-friends-mutualFriends-nbr, #rs-admin-friends-commonPlace-nbr, #rs-admin-friends-commonActivity-nbr{
+    font-size: 0.8rem;
+}
+
+#rs-admin-friends-item-state{
+    padding-left: 5px;
+}
+
+#rs-admin-friends-state-onoffline:hover{
+    color: blue;
+
+}
+#rs-admin-friends-state-message, #rs-admin-friends-state-chat, #rs-admin-friends-state-delete{
+    border: blue 0.5px;
+    color: blue;
+    font-size: 0.8rem;
+}
+
+#rs-admin-friends-state-message:hover, #rs-admin-friends-state-chat:hover, #rs-admin-friends-state-delete:hover{
+    border:white solid 0.5px;
+    color: white;
+    background-color: red;
+}
+
+
+/*****************************
+
+* ADMIN MEMBERS STATS BLOCS *
+
+*****************************/
+
+#rs-admin-members-statsBloc{
+    height: 500px;
+}
+
+#rs-admin-members-statsBloc-title{
+    font-size: 1rem;
+}
+
+#rs-admin-members-statsBloc-view, #rs-admin-members-statsBloc-like, #rs-admin-members-statsBloc-places, #rs-admin-members-statsBloc-client{
+    height: 50px;
+    margin-bottom: 20px !important;
+}
+
+#rs-admin-members-statsBloc-view h1, #rs-admin-members-statsBloc-like h1, #rs-admin-members-statsBloc-places h1, #rs-admin-members-statsBloc-client h1{
+    font-size: 1rem;
+}
+
+#rs-admin-members-statsBloc-view-btn, #rs-admin-members-statsBloc-like-btn, #rs-admin-members-statsBloc-places-btn, #rs-admin-members-statsBloc-client-btn{
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#rs-admin-members-statsBloc-view-badge, #rs-admin-members-statsBloc-like-badge, #rs-admin-members-statsBloc-places-badge, #rs-admin-members-statsBloc-client-badge{
+    top: 5px !important;
+    left: 715px;
+    font-size: 1rem;
+}
+
+
+/*****************************
+
+* ADMIN ASIDE MEMBERS *
+
+*****************************/
+
+
+
+
+#rs-admin-aside-members-container{
+    height: 350px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: orangered; */
+    /* border: black solid 0.5px; */
+}
+
+#rs-admin-aside-members{
+    height: 247px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 15px;
+    padding-right: 0px;
+    /* background-color: orangered; */
+    border: black solid 0.5px;
+    overflow-y: auto;
+}
+
+#rs-admin-aside-members-btn{
+    width: 286px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    /* background-color: rgb(255, 0, 0) !important; */
+
+}
+
+
+#rs-friends-connected-listGroupItem, #rs-members-connected-listGroupItem{
+    border: none;
+}
+
+#rs-admin-aside-members-title h1{
+    font-size: 2rem;
+}
+
+#rs-admin-aside-members-input-group{
+    padding-left: 15px;
+
+}
+
+
+#rs-admin-aside-members-connected{
+    height: 300px;
+    padding-right: 0px !important;
+    overflow-y: auto;
+    border: black solid 1px;
+}
+
+#rs-admin-aside-members-members{
+    height: 350px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: orangered; */
+    border: black solid 0.5px;
+}
