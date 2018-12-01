@@ -96,10 +96,10 @@ io.on('connexion', function (socket) { // qd un utilisateur (encore anonyme) arr
 
 /********************************************/
 
-server.listen(8888, function () {
+/*server.listen(8888, function () {
+    console.log('CONNECTED TO nov_server_reseausocial.js !');
+});*/
+server.listen(process.env.PORT || 8888, function () {
     console.log('CONNECTED TO nov_server_reseausocial.js !');
 });
-// server.listen(process.env.PORT || 8888, function () {
-//     console.log('CONNECTED TO nov_server_reseausocial.js !');
-// });
 // process.env.PORT = port de connexion pour l hebergement chez Heroku
