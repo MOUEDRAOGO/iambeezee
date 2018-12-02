@@ -94,6 +94,47 @@ io.on('connect', function (socket) { // qd un utilisateur (encore anonyme) arriv
         console.log("connected new member");
     });
 
+    socket.on('userSignUpData', function(data) {
+        console.log(data.signUpEmailValue);
+        console.log(data.signUpPasswordValue);
+
+        var response = dbo.collection('members').find({email: data.signUpEmailValue});
+        response.count(function(err, count) {
+            if(count > 0) {
+                console.log("Utilisateur existe deja");
+                socket.emit('emailAlreadyUsed', "Attention l'utilisateur " + data.signUpEmailValue + " existe deja");
+            } else {
+                var obj = {
+                    email: data.signUpEmailValue,
+                    password: data.signUpPasswordValue,
+                    userPermission: "member"
+                };
+
+                dbo.collection("members").insertOne(obj, function(err, res) {
+                    if (err) throw err;
+                    console.log("1 new user inserted");
+                    socket.emit('newMemberCreated', res.insertedId);
+                });
+            }
+        });
+    });
+
+    socket.on('userSignInData', function(data) {
+        console.log('userSignIn try');
+        var response = dbo.collection('members').find({email: data.signInEmailValue});
+        response.count(function(err, count) {
+            if(count > 0) {
+                console.log("Utilisateur est correct");
+                console.log(response);
+                response.forEach(function(obj) {
+                    socket.emit('userIsLogged', obj);
+                });
+            } else {
+                console.log("pas d'utilisateur");
+            }
+        });
+    });
+
     //TO DO qd le user clique sur "validez" : creer un userID et stocker et matcher l email et la confirmation du mot de passe et le check des CGU(check true/false)  en bdd
     //    socket.on('signUpInformations', function() {
     //            console.log("kikou server");

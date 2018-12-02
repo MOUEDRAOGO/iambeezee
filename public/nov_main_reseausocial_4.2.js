@@ -6,8 +6,6 @@
      *                            *
      *****************************/
 
-    console.log("ready");
-    debugger;
     var socket = io();
 
     $(window).on("load", function () { // instruction lue mais exécutée une fois que toute la page est chargée
@@ -15,12 +13,9 @@
         // socket = io(); 
         // initialisation socket.io
 
-        var test = document.getElementById('#includedNavbar');
-        console.log("LOL");
-        console.log(test);
-        debugger;
         $("#includedNavbar").load("/html/nov_navbar_4.2.html", function(){ 
             f_signUp();
+            f_signIn();
         });
 
         socket.emit('message1', function () {
@@ -34,7 +29,6 @@
         /* SIGN UP */
 
         /* SIGN IN */
-        // f_signIn();
 
         /* onOffSwitchButtonSetUp */
         // f_onOffSwitchButtonSetUp();
@@ -66,15 +60,10 @@
 
     function f_signUp() {
         // TO DO affichage des CGU au click sur CGU , dans une popup avec dimensions specifiques
-        console.log("kikou");
 
-        let signupValidateBtn = $('.test');
-        let test = document.getElementById("#rs-signup-validate-btn");
-        debugger;
+        let signupValidateBtn = $('#rs-signup-validate-btn');
 
         signupValidateBtn.click( function() {
-            console.log("kikou");
-            debugger;
             let isFormValid = true; 
             let signUpEmail = $("#SignUpEmail").get(0);
             let signUpEmailValue = signUpEmail.value;
@@ -118,9 +107,17 @@
                 let signupCguInput = $('#rs-signup-cgu-input')
                 let signupCguInputValue = signupCguInput.value
 
-                socket.emit('usersSignUpData',{signUpEmailValue, signUpPasswordValue, signUpConfirmPasswordValue, signupCguInputValue}); // renvoie, au server, les valeurs de signUpEmail, signUpPassword et de signUpConfirmPassword + acceptation des cgu, afin de les stocker dans l'id du membre
+                socket.emit('userSignUpData',{signUpEmailValue, signUpPasswordValue}); // renvoie, au server, les valeurs de signUpEmail, signUpPassword et de signUpConfirmPassword + acceptation des cgu, afin de les stocker dans l'id du membre
 
             }
+
+            socket.on('emailAlreadyUsed', function(data) {
+                console.log(data);
+            });
+
+            socket.on('newMemberCreated', function(data) {
+                console.log(data);
+            });
         });
 
 
@@ -148,7 +145,23 @@
     }
 
 
+    function f_signIn() {
+        console.log('signIN');
+        let rsSignupEnterBtn = $('#rs-signup-enter-btn');
+        rsSignupEnterBtn.click(function() {
+        console.log('signInClicked');
+            let signInEmailValue = $('#signInEmail').get(0).value; 
+            let signInPasswordValue = $('#signInPassword').get(0).value; 
 
+            socket.emit('userSignInData', {signInEmailValue, signInPasswordValue});
+        });
+
+        socket.on('userIsLogged', function(data) {
+            let rsNavbarNotificationsTitle = $('#rs-navbar-notifications-title');
+            console.log(data.email);
+            rsNavbarNotificationsTitle.get(0).innerText = data.email;
+        });
+    }
 
 
 
