@@ -1,0 +1,19 @@
+48.85824,2.29438
+
+
+[XXX-LATITUDE-XXX, XXX-LONGITUDE-XXX]
+
+
+
+[XXX-LATITUDE-CENTER-XXX, XXX-LONGITUDE-CENTER-XXX]
+
+
+
+
+pk.eyJ1IjoibW91ZWRyYW9nbyIsImEiOiJjam1xZDh4anIwMnA5M3ZudHoxY2M0cDR0In0.jBA2IJ2u-xotaT5jQsJh9A
+
+À modifier : XXX-YOUR-MAPBOX-ACCESS-TOKEN-XXX
+
+
+
+https://api.mapbox.com/styles/v1/mouedraogo/cjmqe4rk8vh9c2sqq5sy337jk.html?fresh=true&title=true&access_token=pk.eyJ1IjoibW91ZWRyYW9nbyIsImEiOiJjam1xZDh4anIwMnA5M3ZudHoxY2M0cDR0In0.jBA2IJ2u-xotaT5jQsJh9A#12.0/48.866500/2.317600/0

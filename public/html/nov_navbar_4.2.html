@@ -1,0 +1,212 @@
+<!-- NAV CONTAINER -->
+<section id="rs-nav-container" class="rs-nav-container sticky-top col-md-12 container-fluid">
+    <!-- sticky-top pour fixer la navbar -->
+
+    <!-- NAVBAR -->
+    <nav id="rs-main-navbar" class="rs-main-navbar navbar navbar-expand-lg navbar-light col-md-12 container-fluid">
+
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+        <div id="navbarNavAltMarkup" class="collapse navbar-collapse col-md-12 rs-no-padding rs-no-margin">
+            <div id="navbar-nav" class="navbar-nav col-md-12">
+                <a id="rs-navbar-icon-container" class="rs-navbar-icon-container nav-item nav-link active col-md-1 text-center"
+                    href="reseausocial_3.5.html"> <img id="rs-navbar-icon" class="rs-navbar-icon" src="./assets/icons/castle_40px.png"
+                        alt="" /></a>
+                <a id="rs-navbar-title" class="rs-navbar-title navbar-brand col-md-6 rs-no-padding rs-no-margin" href="#">
+                    <h1>IAMBEEZEE</h1>
+                    <h2>ton réseau social pour occuper ton temps perdu !</h2>
+                </a>
+
+                <!-- <div class="rs-navbar-admin-dropdown col-md-1 rs-no-padding rs-no-margin dropdown">
+                        <button type="button" class="rs-navbar-admin-dropdown-btn btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            ADMIN
+                        </button>
+                        <div class="rs-navbar-admin-dropdown-menu dropdown-menu">
+                            <a class="rs-navbar-admin-menuOccupations dropdown-item" href="#">Admin Occupations</a>
+                            <a class="rs-navbar-admin-menuMembers dropdown-item" href="#">Admin Members</a>
+                        </div>
+                        </div> -->
+
+                <!-- <a class=" nav-item nav-link col-md-1 text-center" href="#">M'inscrire</a> -->
+
+                <div id="rs-navbar-signup" class="rs-navbar-signup col-md-2 rs-no-padding rs-no-margin">
+                    <button id="rs-signup-btn" class="rs-signup-btn btn btn-info btn-lg dropdown-toggle" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Inscription
+                    </button>
+
+                    <form id="dropdown-menu-sign-up" class="dropdown-menu p-4" novalidate>
+
+                        <!-- <div id="form-group" class="form-group">
+                                    <label for="surnameDropdown">Surname</label>
+                                    <input type="text" class="form-control" id="surnameDropdown" placeholder="Doe">
+                                </div>
+
+                            <div id="form-group" class="form-group">
+                                    <label for="nameDropdown">Surname</label>
+                                    <input type="text" class="form-control" id="nameDropdown" placeholder="John">
+                                </div> -->
+
+                        <div id="form-group-pseudo" class="form-group">
+                            <label for="signUpPseudo">Votre pseudo*</label>
+                            <input type="text" id="signUpPseudo" class="form-control" min="6" maxlength="40"
+                                pattern="^.{6,40}$" placeholder="pseudo" value="pseudokikou">
+                            <!-- pattern="^.{6,40}$" = any string between 6 and 40 characters in length -->
+                        </div>
+
+
+                        <div id="form-group-email" class="form-group">
+                            <label for="signUpEmail">Votre email*</label>
+                            <input type="email" id="signUpEmail" class="form-control" min="6" maxlength="40"
+                                placeholder="signup@test.com" value="kikou@lol.com">
+                            <!-- pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{6,40}$" = This expression matches email addresses, and checks that they are of the proper form. It checks to ensure the top level domain is between 6 and 40 characters long -->
+                        </div>
+                        <div id="form-group-password" class="form-group">
+                            <label for="signUpPassword">Votre mot de passe*</label>
+                            <input type="password" id="signUpPassword" class="form-control" min="6" maxlength="40"
+                                pattern="^.{6,40}$" placeholder="tatamichelle" value="kikou">
+                            <!-- pattern="^.{6,40}$" = any string between 6 and 40 characters in length -->
+                        </div>
+
+                        <div id="form-group-confirm" class="form-group">
+                            <label for="signUpConfirmPassword">Confirmez votre mot de passe*</label>
+                            <input type="password" id="signUpConfirmPassword" class="form-control" placeholder="tatamichelle"
+                                value="kikou">
+                        </div>
+
+
+                        <button type="button" id="rs-signup-validate-btn" class="test btn btn-primary">Validez</button>
+                    </form>
+                </div>
+
+                <div id="rs-login-dropdown" class="rs-login-dropdown col-md-2 rs-no-padding rs-no-margin">
+                    <button id="rs-login-btn" class="rs-login-btn btn btn-info btn-lg dropdown-toggle col-md-5" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </button>
+
+                    <form id="dropdown-menu-sign-in" class="dropdown-menu p-4" novalidate>
+                        <div id="form-group" class="form-group">
+                            <label for="signInEmail">Votre email*</label>
+                            <input id="signInEmail" type="email" class="form-control" placeholder="signin@test.com">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <label for="signInPassword">Votre mot de passe*</label>
+                            <input id="signInPassword" type="password" class="form-control" placeholder="tatamichelle">
+                        </div>
+
+                        <span id="rs-login-accessForgotten" class="rs-login-accessForgotten col-md-12">
+                            <h1 id="rs-login-accessForgotten-link">Mot de passe oublié ?</h1>
+                        </span>
+
+                        <button type="button" id="rs-signup-enter-btn" class="btn btn-primary">Entrez</button>
+                    </form>
+                </div>
+
+                <!-- ATTENTIONNNNNNNNNNNN  2 ID -->
+                <li id="rs-navbar-notifications" class="rs-navbar-notifications nav-item dropdown col-md-2 rs-no-padding">
+                    <div id="rs-navbar-notifications-pic-container" class="rs-navbar-notifications-pic-container col-md-2 rs-no-padding rs-no-margin"><img
+                            id="rs-navbar-notificationsImage" class="rs-navbar-notificationsImage rounded-circle img-responsive"
+                            src="./assets/images/Visage/visage_1.jpg" alt="Chicago" /></div>
+                    <a id="rs-navbar-notifications-title" id="navbarDropdownMenuLink" class="rs-navbar-notifications-title nav-link dropdown-toggle text-center"
+                        href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mon compte
+                    </a>
+                    <div id="rs-navbar-notifications-dropdown" class="rs-navbar-notifications-dropdown dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"><a id="rs-notifications-dropdown-linkAdminO" class="rs-notifications-dropdown-linkAdminO dropdown-item"
+                            href="./profil_reseausocial_1.0.html">Admin Occupations</a><a id="rs-notifications-dropdown-linkAdminM"
+                            class="rs-notifications-dropdown-linkAdminM dropdown-item" href="./profil_reseausocial_1.0.html">Admin
+                            Membres</a><a id="rs-notifications-dropdown-linkA" class="rs-notifications-dropdown-linkA dropdown-item"
+                            href="./profil_reseausocial_1.0.html">Mon compte</a><a id="rs-notifications-dropdown-linkB"
+                            class="rs-notifications-dropdown-linkB dropdown-item" href="./profil_reseausocial.html">Mon
+                            profil</a><a id="rs-notifications-dropdown-linkC" class="rs-notifications-dropdown-linkC dropdown-item"
+                            href="./activite_reseausocial_1.0.html">Mon activité</a><a id="rs-notifications-dropdown-linkD"
+                            class="rs-notifications-dropdown-linkD dropdown-item" href="./friends_reseausocial_1.0.html">Mes
+                            amis</a><a id="rs-notifications-dropdown-disconnexion dropdown-item" class="rs-notifications-dropdown-disconnexion dropdown-item"
+                            href="#">Me déconnecter</a></div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <!-- end of NAVBAR -->
+
+    <!-- SEARCH BAR -->
+
+    <section id="rs-main-search" class="col-md-12">
+
+        <div id="rs-search-time" class="col-md-5 rs-no-margin rs-no-padding">
+            <!-- 
+                <div class="col-md-12">
+                    <form class="form-search form-inline">
+                        <div class="input-append">
+                            <input type="text" class="search-query" placeholder="Mc Donald, bar, restaurant chinois,..." />
+                            <button type="submit" class="btn btn-primary">Trouver</button>
+                        </div>
+                    </form>
+                </div> -->
+
+            <div id="rs-search-text" class="rs-search-text col-md-4 rs-no-padding">
+                <h1>Ton temps disponible : </h1>
+            </div>
+
+            <!-- hour bloc  -->
+            <div id="rs-hourBloc" class="rs-hourBloc col-md-3 rs-no-margin">
+
+                <select id="rs-hourData" class="col-md-3">
+                </select>
+                <h1>Heures</h1>
+
+
+
+            </div>
+            <!-- end of hour bloc  -->
+
+            <!-- minutes bloc  -->
+            <div id="rs-minuteBloc" class="rs-minuteBloc col-md-3 rs-no-margin">
+
+                <select id="rs-minuteData" class="col-md-3">
+                </select>
+                <h1>Minutes</h1>
+
+
+            </div>
+            <!-- end of minutes bar  -->
+
+            <!-- <button type="submit" class="btn btn-primary col-md-3">Je trouve mon occupations</button> -->
+
+        </div>
+
+        <div id="rs-minuteBloc-warning" class="rs-minuteBloc-warning">
+            <h1>Ouppssss ! Tu n'as pas indiqué ton temps disponible.</h1>
+            <button type="button" id="rs-minuteBloc-warning-close-btn" class="rs-minuteBloc-warning-close-btn btn btn-primary btn-lg btn-block ml-auto col-md-4">Fermer</button>
+
+        </div>
+
+        <div id="rs-search-localisation" class="col-md-7 rs-no-margin rs-no-padding">
+            <div id="rs-search-localisation-text" class="rs-search-localisation-text col-md-2 rs-no-padding">
+                <h1>Ta localisation : </h1>
+            </div>
+
+            <form id="rs-search-localisation-form" class="rs-search-localisation-form col-md-10 rs-no-padding">
+                <div id="rs-search-localisation-formGroup" class="rs-search-localisation-formGroup form-group rs-no-margin">
+                    <input type="text" id="form-search" class="rs-search-localisation-formGroup-input form-group text-left rs-no-margin"
+                        placeholder="Paris, Limoges, Rouen,..." />
+                    <button type="submit" id="rs-search-localisation-btn" class="rs-search-localisation-btn btn btn-primary">Trouver
+                        une occupation</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="rs-search-localisation-warning" class="rs-search-localisation-warning">
+            <h1>Ouppssss ! Tu n'as pas indiqué ta localisation.</h1>
+            <button type="button" id="rs-search-localisation-warning-close-btn" class="rs-search-localisation-warning-close-btn btn btn-primary btn-lg btn-block ml-auto col-md-4">Fermer</button>
+
+        </div>
+
+    </section>
+
+
+</section>
+<!-- end of NAV CONTAINER -->

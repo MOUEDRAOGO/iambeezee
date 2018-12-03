@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+
+
+</head>
+
+<body>
+
+    <!-- templating des documents html -->
+    <script>
+        $(function () {
+            $("#includedNavbar").load("./shared/nov_navbar_4.2.html");
+        });
+
+        $(function () {
+            $("#includedFooter").load("./shared/nov_footer_4.2.html");
+        });
+
+    </script>
+
+    <!-- MAIN CONTAINER -->
+    <section id="rs-main-container" class="rs-main-container col-md-12 container-fluid">
+
+
+        <!-- NAV CONTAINER -->
+
+        <div id="includedNavbar" class="col-md-12 rs-no-padding rs-no-margin"></div>
+
+        <!-- end of NAV CONTAINER -->
+
+
+        <!-- MAIN SECTION -->
+        <section id="rs-main-section-occupationsFocus" class="rs-main-section-occupationsFocus col-md-12">
+            <div id="rs-occupationsFocus-container" class="rs-occupationsFocus-container col-md-12">
+                <div id="rs-focusBloc-container" class="rs-focusBloc-container offset-md-2 col-md-10 rs-no-margin rs-no-padding">
+                    <div id="rs-focusBloc-description" class="rs-focusBloc-description col-md-8 rs-no-margin rs-no-padding">
+
+                        <div id="rs-focusBloc-img" class="rs-focusBloc-img col-md-12 rs-no-margin rs-no-padding">
+
+                        </div>
+
+                        <div id="rs-focusBloc-description-text" class="rs-focusBloc-description-text col-md-12">
+                            <h1>Description</h1>
+                            <h2></h2>
+
+                        </div>
+
+                        <div id="rs-focusBloc-description-clients" class="rs-focusBloc-description-clients col-md-12">
+                            <h1>Participants</h1>
+                            <button id="rs-focusBloc-description-clients-btn" type="button" class="rs-focusBloc-description-clients-btn btn btn-primary text-left rs-no-margin rs-no-padding">
+                                Nombre de personnes ayant participé à cette activité : <span id="rs-focusBloc-description-clients-badge"
+                                    class="rs-focusBloc-description-clients-badge badge badge-light">142</span>
+                            </button>
+
+                        </div>
+
+                        <div id="rs-focusBloc-description-price" class="rs-focusBloc-description-price col-md-12">
+                            <h1>Tarifs</h1>
+                            <ul id="rs-focusBloc-description-price-listGroup" class="rs-focusBloc-description-price-listGroup list-group col-md-5">
+                                <li id="list-group-item" class="list-group-item d-flex justify-content-between align-items-center">
+                                    Prix €/pers :
+                                    <span id="rs-focusBloc-description-price-badge" class="rs-focusBloc-description-price-badge badge badge-primary badge-pill">14</span>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div id="rs-focusBloc-description-contact" class="rs-focusBloc-description-contact col-md-12">
+                            <h1>Contacter le prestataire</h1>
+                            <h2>Un doute sur les prix, le lieux de rendez-vous ou toute autre question ? Contactez le
+                                prestataire, C'est gratuit !</h2>
+
+                            <button type="button" id="rs-focusBloc-description-contactPhone" class="rs-focusBloc-description-contactPhone btn btn-primary btn-lg outline">Téléphoner
+                                au prestataire</button>
+                            <button type="button" id="rs-focusBloc-description-contactEmail" class="rs-focusBloc-description-contactEmail btn btn-primary btn-lg outline">Envoyer
+                                un email au prestataire</button>
+                        </div>
+
+                        <div id="rs-focusBloc-description-access" class="rs-focusBloc-description-access col-md-12">
+                            <h1>Accès</h1>
+                            <div id="rs-focusBloc-description-map" class="col-md-12">
+                                <div id="descriptionMap" class="col-md-12">
+
+                                </div>
+                                <!-- ici doit etre integré la carte -->
+                            </div>
+
+                            <div id="rs-description-map-route" class="rs-description-map-route col-md-12">
+
+                            </div>
+
+                        </div>
+
+                        <div id="rs-focusBloc-commentBloc-container" class="rs-focusBloc-commentBloc-container col-md-12 rs-no-margin rs-no-padding">
+
+                            <div id="rs-focusBloc-commentBloc-mainTitle" class="rs-focusBloc-commentBloc-mainTitle col-md-12">
+                                <h1>COMMENTAIRES</h1>
+                            </div>
+
+                            <div id="rs-focusBloc-commentBloc-commentZone" class="col-md-12 rs-focusBloc-commentBloc-commentZone">
+                                <h1>Ecrivez un commentaire à "nomdeloccupation"</h1>
+                                <form id="form-search form-inline" class="form-search form-inline">
+                                    <div id="input-append" class="input-append">
+                                        <input id="rs-focusBloc-commentBloc-commentZone-input" type="text" class=" rs-focusBloc-commentBloc-commentZone-input search-query"
+                                            placeholder="Ecrivez ici votre commentaire" />
+                                        <button id="btn btn-primary" type="submit" class="btn btn-primary">Publier</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="rs-focusBloc-commentBloc-mainTitle" class="rs-focusBloc-commentBloc-mainTitle col-md-12">
+                                <h1>Commentaires</h1>
+                            </div>
+
+
+                        </div>
+                        <!-- end of rs-focusBloc-commentBloc-container -->
+
+                        <div id="rs-focusBloc-description-sharing" class="rs-focusBloc-description-sharing col-md-12">
+                            <h1>Je refile le bon plan à mes amis</h1>
+                            <div id="rs-focusBloc-description-sharingLink" class="rs-focusBloc-description-sharingLink text-center center-block">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div id="rs-focusBloc-coordinates" class="rs-focusBloc-coordinates col-md-4">
+
+                        <div id="rs-coordinates-presentation" class="rs-coordinates-presentation col-md-12">
+                            <div id="rs-coordinates-presentation-logo" class="rs-coordinates-presentation-logo col-md-4"></div>
+                            <div id="rs-coordinates-presentation-title" class="rs-coordinates-presentation-title col-md-8">
+                                <h1>Prestataire XXXXXX</h1>
+                            </div>
+
+
+                        </div>
+
+                        <div id="rs-coordinates-presentation-call" class="rs-coordinates-presentation-call col-md-6">
+                            <a href="http://www.travelski.fr" id="rs-coordinates-presentation-ahref" class="rs-coordinates-presentation-ahref col-md-11 rs-no-padding"><span
+                                    id="rs-coordinates-presentation-divButton" class="rs-coordinates-presentation-divButton col-md-12">
+                                    <button type="button" class="rs-coordinates-presentation-bouton btn btn-block">
+                                        <h1><b>Telephoner</b></h1>
+                                        <span id="rs-coordinates-glyph" class="rs-coordinates-glyph glyphicon glyphicon-play"></span>
+                                    </button>
+                                </span></a>
+                        </div>
+
+                        <div id="rs-coordinates-presentation-email" class="rs-coordinates-presentation-email col-md-6">
+                            <a href="mailto:" id="rs-coordinates-presentation-ahref" class="rs-coordinates-presentation-ahref col-md-11 rs-no-padding"><span
+                                    id="rs-coordinates-presentation-divButton" class="rs-coordinates-presentation-divButton col-md-12">
+                                    <button type="button" id="rs-coordinates-presentation-bouton" class="rs-coordinates-presentation-bouton btn btn-block">
+                                        <h1><b>Email</b></h1>
+                                        <span id="rs-coordinates-glyph" class="rs-coordinates-glyph glyphicon glyphicon-play"></span>
+                                    </button>
+                                </span></a>
+
+                        </div>
+
+                        <div id="rs-coordinates-presentation-route" class="rs-coordinates-presentation-route offset-md-2 col-md-10 rs-no-margin rs-no-padding">
+                            <span id="rs-coordinates-route-divButton" class="rs-coordinates-route-divButton col-md-12">
+                                <button type="button" id="rs-coordinates-route-bouton" class="rs-coordinates-route-bouton btn btn-block rs-no-margin rs-no-padding">
+                                    <h1><b>Calculer l'itinereaire</b></h1>
+                                    <span id="rs-route-glyph" class="rs-route-glyph glyphicon glyphicon-play"></span>
+                                </button>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- <div class="rs-focusOthersActivities-container mx-md-auto col-md-12">
+
+                 
+
+            </div> -->
+            <!-- end of rs-occupationsFocus-container -->
+
+
+
+        </section>
+        <!-- end of MAIN SECTION -->
+
+
+
+
+        <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER  -->
+
+        <div id="includedFooter" class="col-md-12 rs-no-padding rs-no-margin"></div>
+
+        <!-- END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER   -->
+
+
+
+
+
+
+    </section>
+    <!-- END MAIN CONTAINER -->
+
+</body>
+
+</html>

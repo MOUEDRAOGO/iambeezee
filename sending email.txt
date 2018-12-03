@@ -1,0 +1,15 @@
+
+https://www.w3schools.com/nodejs/nodejs_email.asp
+
+
+
+https://nodemailer.com/about/
+
+
+
+
+
+
+https://stackoverflow.com/questions/39092822/how-to-do-confirm-email-address-with-express-node
+
+ovh : OM33123-OVH 
