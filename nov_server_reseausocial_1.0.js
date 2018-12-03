@@ -12,7 +12,8 @@ const http = require('http');
 const fs = require('fs');
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
-// const url = "mongodb://localhost:27017/playersdb";
+var ObjectId = mongo.ObjectID;
+//const url = "mongodb://localhost:27017/playersdb";
 
 
 /*****************************************************************************************************************************************************************************
@@ -24,8 +25,8 @@ const MongoClient = mongo.MongoClient;
 // const mongo = require('mongodb');
 
 // const MongoClient = mongo.MongoClient;
-// const url = "mongodb://localhost:27017/iambeezeedb";
-const url = "mongodb://admin:admin1@ds119374.mlab.com:19374/iambeezee"; 
+const url = "mongodb://localhost:27017/iambeezeedb";
+//const url = "mongodb://admin:admin1@ds119374.mlab.com:19374/iambeezee"; 
 
 //mongod.exe --dbpath=H:\MOUEDRAOGO\atelier_reseau_social\iambeezee\data
 
@@ -109,7 +110,8 @@ io.on('connect', function (socket) { // qd un utilisateur (encore anonyme) arriv
                     pseudo: userSignUpData.signUpPseudoValue,
                     email: userSignUpData.signUpEmailValue,
                     password: userSignUpData.signUpPasswordValue,
-                    userPermission: "member"
+                    userPermission: "member",
+                    userStatus: "offline"
                 };
 
                 // insertion d un new member ds la bdd
@@ -118,15 +120,12 @@ io.on('connect', function (socket) { // qd un utilisateur (encore anonyme) arriv
                     console.log("server  : 1 new user inserted");
                     socket.emit('newMemberCreated', res.insertedId);
 
-                    newMembersNbr++ //a la creation d 'un new member, on le rajoute au nbre de membres deja cree
-                    console.log("server  : nbre de new members =  " + newMembersNbr )
+                    newMembersNbr++; //a la creation d 'un new member, on le rajoute au nbre de membres deja cree
+                    console.log("server  : nbre de new members =  " + newMembersNbr );
                     socket.emit('newMembersNbrMore', obj);
 
-                    membersConnected++
-                    console.log("nbre de members connectés =  " + membersConnected )
-                    socket.emit('newMembersConnectedMore', membersConnected);
 
-                    
+
                 });
                 // 
             }
@@ -139,9 +138,14 @@ io.on('connect', function (socket) { // qd un utilisateur (encore anonyme) arriv
         response.count(function(err, count) {
             if(count > 0) {
                 console.log("server  : ok cet email appartient bien a un membre");
-                console.log(response);
                 response.forEach(function(obj) {
-                    socket.emit('userIsLogged', obj.pseudo);
+                    //dbo.collections("members").update({_id: new ObjectId(obj._id)},{$set: { userStatus: "online" }});
+                    obj.userStatus = "online";
+                    socket.emit('userIsLogged', obj);
+                    membersConnected++;
+                    console.log("nbre de members connectés =  " + membersConnected );
+                    socket.broadcast.emit('newMembersConnectedMore', membersConnected);
+                    socket.emit('newMembersConnectedMore', membersConnected);
                 });
             } else {
                 console.log("server  : cet email n est pas celui d un membre existant ");
@@ -149,12 +153,23 @@ io.on('connect', function (socket) { // qd un utilisateur (encore anonyme) arriv
         });
     });
 
+    socket.on('getAccountInfo', function(id, fn) {
+        console.log(id);
+        dbo.collection("members").findOne({_id: new ObjectId(id)}, function(err, result) {
+            if (err) throw err;
+            console.log(result);
+            fn(result);
+        });
+    });
     //DISCONNECTION
     socket.on('disconnect', function(){
         siteConnexionsNbr--;
-        
 
-        membersConnected--;
+
+        if(membersConnected > 0){
+            membersConnected--;
+        }
+        socket.broadcast.emit('newMembersConnectedMore', membersConnected);
         console.log("server  : il reste " + membersConnected + " membres connectés");
     });
 }); // end of io.on

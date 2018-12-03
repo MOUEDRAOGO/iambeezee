@@ -7,19 +7,37 @@
      *****************************/
 
     var socket = io();
+    let navbar;
+    let mainPage;
+    let accountPage;
+    let userId;
 
     $(window).on("load", function () { // instruction lue mais exécutée une fois que toute la page est chargée
 
         // socket = io(); 
         // initialisation socket.io
 
-        $("#includedNavbar").load("/html/nov_navbar_4.2.html", function(){ 
+        navbar = $("#includedNavbar");
+        mainPage = $("#includedMiddleBloc");
+        accountPage = $("#includedAccountMiddleBloc") 
+
+        navbar.load("/html/nov_navbar_4.2.html", function(){ 
             f_signUp();
             f_signIn();
-        });
+            $("#rs-notifications-dropdown-linkA").click(function(e) {
+                e.preventDefault();
+                mainPage.hide();
+                accountPage.load("/html/nov_page_account_reseausocial_4.2.html", function() {
+                    console.log("account loaded");
+                    socket.emit("getAccountInfo", userId, function(userInfo) {
+                        console.log(userInfo);
+                        $("#inputEmail4").get(0).value = userInfo.email;
+                        $("#inputpseudo").get(0).value = userInfo.pseudo;
+                    });
+                    accountPage.show();
+                });
+            });
 
-        socket.emit('message1', function () {
-            console.log('message1 envoyé par le client')
         });
 
         /* USER DEFAULT LOCALISATION */
@@ -67,10 +85,10 @@
             let isFormValid = true; 
 
             let signUpPseudo = $("#signUpPseudo").get(0);
-            
+
             let signUpPseudoValue = signUpPseudo.value;
             console.log(signUpPseudoValue);
-            
+
             if(!signUpPseudoValue) { 
                 console.log("client  : Pas de signUpPseudoValue");
             }
@@ -110,7 +128,7 @@
                 let newMembersNbr = 0;
                 let connectedMembersNbr = 0;
 
-                if (signUpConfirmPassword.setCustomValiy('')) {
+                if (signUpConfirmPassword.setCustomValidity('')) {
                     connexionStatus = "online"; // changement de statut  
 
                     newMembersNbr++; // qd un nouveau membre s inscrit on incremente le nbre de nouveaux membres 
@@ -133,14 +151,6 @@
                 console.log(emailAlreadyUsedData);
             });
 
-            // socket.on('newMembersConnectedMore', function(membersConnected) {
-            //     console.log(membersConnected);
-            //     let realtimeConnectedBadge = $('rs-realTime-connected-badge');
-            //     realtimeConnectedBadge.get(0).innerText = membersConnected;
-
-            // });
-
-            
         });
 
 
@@ -171,17 +181,25 @@
         console.log('signIN');
         let rsSignupEnterBtn = $('#rs-signup-enter-btn');
         rsSignupEnterBtn.click(function() {
-        console.log('signInClicked');
+            console.log('signInClicked');
             let signInEmailValue = $('#signInEmail').get(0).value; 
             let signInPasswordValue = $('#signInPassword').get(0).value; 
 
             socket.emit('userSignInEmit', {signInEmailValue, signInPasswordValue});
         });
 
-        socket.on('userIsLogged', function(pseudo) {
+        socket.on('userIsLogged', function(userObj) {
             let rsNavbarNotificationsTitle = $('#rs-navbar-notifications-title');
-            console.log(pseudo);
-            rsNavbarNotificationsTitle.get(0).innerText = pseudo;
+            console.log(userObj);
+            userId = userObj._id;
+            rsNavbarNotificationsTitle.get(0).innerText = userObj.pseudo;
+        });
+
+        socket.on('newMembersConnectedMore', function(membersConnected) {
+            console.log(membersConnected);
+            let realtimeConnectedBadge = $('#rs-realTime-connected-badge');
+            realtimeConnectedBadge.get(0).innerText = membersConnected;
+
         });
     }
 
