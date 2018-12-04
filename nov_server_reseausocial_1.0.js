@@ -25,8 +25,8 @@ var ObjectId = mongo.ObjectID;
 // const mongo = require('mongodb');
 
 // const MongoClient = mongo.MongoClient;
-const url = "mongodb://localhost:27017/iambeezeedb";
-//const url = "mongodb://admin:admin1@ds119374.mlab.com:19374/iambeezee"; 
+//const url = "mongodb://localhost:27017/iambeezeedb";
+const url = "mongodb://admin:admin1@ds119374.mlab.com:19374/iambeezee"; 
 
 //mongod.exe --dbpath=H:\MOUEDRAOGO\atelier_reseau_social\iambeezee\data
 
