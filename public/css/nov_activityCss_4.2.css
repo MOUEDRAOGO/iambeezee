@@ -1,0 +1,12 @@
+/************************* CSS DE LA PAGE MON ACTIVITE RESEAU SOCIAL activite_reseausocial.html *******************************************************************/
+
+
+
+#rs-activity-container{
+    height: 550px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+}

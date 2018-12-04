@@ -1,0 +1,209 @@
+
+
+/*****************************
+
+******* rs-aside-notifications-container *******
+
+*****************************/
+
+.rs-aside-notifications-container{
+    height: auto;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: grey; */
+    /* background-color: #006600; */
+    background-color: #FF0000;
+    /* border: black solid 0.5px; */
+}
+
+
+/*****************************
+
+**** rs-realTime-container ***
+
+*****************************/
+
+
+.rs-realTime-container{
+    height: 190px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* background-color: green; */
+    /* border: black solid 0.5px; */
+}
+
+.rs-realTime-title{
+    height: 35px;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: green; */
+    /* border: black solid 0.5px; */
+
+}
+
+.rs-realTime-title h1{
+    font-size: 1.5rem !important;
+
+}
+
+.rs-realTime-comments{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: green; */
+    /* border: black solid 0.5px; */
+    
+}
+
+.rs-realTime-comments-btn, .rs-realTime-msg-btn, .rs-realTime-connected-btn{
+    /* padding-right: 173px !important; */
+    width: 100%;
+    /* background-color: rgb(255, 0, 0) !important; */
+    /* color: rgb(255, 0, 0); */
+
+}
+
+.rs-realTime-msg{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: green; */
+    /* border: black solid 0.5px; */
+}
+
+.rs-realTime-connected{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: green; */
+    /* border: black solid 0.5px; */
+}
+
+.rs-asideNotifications-data{
+    height: 140px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: grey; */
+    /* border: black solid 0.5px; */
+}
+
+.rs-asideNotifications-title h1{
+    font-size: 1.5rem;
+
+}
+
+
+/*****************************
+
+**** aside-message             ***
+
+*****************************/
+
+
+.rs-asideMessage{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: orangered; */
+    /* border: black solid 0.5px; */
+}
+
+.rs-aside-message-btn{
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    /* background-color: rgb(255, 0, 0) !important; */
+
+}
+
+.rs-aside-message-badge{
+    left: 130px;
+    top: 5px !important;
+    font-size: 1rem;
+}
+
+/*****************************
+
+**** aside-chat             ***
+
+*****************************/
+
+.rs-asideChat{
+    height: 395px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: orangered; */
+    /* border: black solid 0.5px; */
+}
+
+.rs-aside-chat-btn{
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left !important;
+    /* background-color: rgb(255, 0, 0) !important; */
+
+}
+
+.rs-aside-chat-badge{
+    left: 130px;
+    top: 5px !important;
+    font-size: 1rem;
+}
+
+.rs-aside-chat-connected{
+    height: 268px;
+    padding-right: 0px !important;
+    overflow-y: auto;
+    /* border: black solid 1px; */
+}
+
+.rs-chat-connected-listGroupItem{
+    border: none;
+}
+
+.rs-chat-connected-listGroupItem h1{
+    font-size: 1rem;
+}
+
+/* .rs-chat-connected-onOffLine-badge{
+    left: 34px !important;
+} */

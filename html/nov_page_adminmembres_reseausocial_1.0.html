@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+</head>
+
+<body>
+
+    <script>
+        $(function () {
+            $("#includedNavbar").load("./shared/nov_navbar_4.2.html");
+        });
+
+        // $(function(){
+        //     $("#includedAsideAccount").load("./shared/nov_asideAccount_4.2.html"); 
+        // });
+
+        //     $(function(){
+        //     $("#includedAsideFriends").load("./shared/nov_asideFriends_4.2.html"); 
+        // });               
+
+        $(function () {
+            $("#includedFooter").load("./shared/nov_footer_4.2.html");
+        });
+
+    </script>
+
+    <!-- MAIN CONTAINER -->
+    <section id="rs-main-container" class="rs-main-container col-md-12 container-fluid">
+
+
+        <!-- NAV CONTAINER -->
+
+        <div id="includedNavbar" class="col-md-12 rs-no-padding rs-no-margin"></div>
+
+
+        <!-- end of NAV CONTAINER -->
+
+
+        <!-- MAIN SECTION -->
+        <section id="rs-main-section" class="rs-main-section col-md-12">
+
+
+            <!-- rs-admin-business-container -->
+            <div id="rs-admin-business-container" class="rs-admin-business-container col-md-2 ">
+
+                <div id="rs-admin-asideBusiness-title" class="rs-admin-asideBusiness-title col-md-12">
+
+                    <!-- <button type="button" class="rs-admin-aside-business-btn btn btn-primary text-left rs-no-margin rs-no-padding">
+                            
+                    </button> -->
+                    <h1>Occupations</h1>
+
+                </div>
+
+                <div id="rs-admin-business-input-group" class="rs-admin-business-input-group input-group mb-3">
+                    <input type="text" id="form-control" class="form-control rs-no-padding" placeholder="Café commerce"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div id="input-group-append" class="input-group-append">
+                        <button id="btn btn-outline-secondary" class="btn btn-outline-secondary" type="button">OK</button>
+                    </div>
+                </div>
+
+                <div class="rs-admin-aside-business col-md-12 rs-no-margin" id="id-scrollbar-Style">
+                    <!-- rs-scrollbar-Style col-md-12 rs-no-margin"   -->
+
+                    <ul id="rs-admin-business-listGroup" class="rs-admin-business-listGroup  list-group col-md-12 rs-no-padding rs-no-margin">
+
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Café du commerce
+                        </li>
+                        <li class=" rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Ritz Hotel
+                        </li>
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Ecole de plongée
+                        </li>
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Champ de Mars
+                        </li>
+
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Parc des Princes
+                        </li>
+                        <li class=" rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Moving
+                        </li>
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Bilard Club
+                        </li>
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Bibliotheque Francois Miterrand
+                        </li>
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Café du commerce
+                        </li>
+                        <li class=" rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Ritz Hotel
+                        </li>
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Ecole de plongée
+                        </li>
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Champ de Mars
+                        </li>
+
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Parc des Princes
+                        </li>
+                        <li class=" rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Moving
+                        </li>
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Bilard Club
+                        </li>
+                        <li id="rs-admin-business-listGroupItem list-group-item" class="rs-admin-business-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Bibliotheque Francois Miterrand
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- rs-admin-business-container -->
+
+            <!-- rs-middleBloc -->
+            <div id="rs-middleBloc" class="rs-middleBloc col-md-8 rs-no-padding">
+
+
+                <div id="rs-admin-identity-container" class="rs-admin-identity-container col-md-12 rs-no-margin rs-no-padding">
+                    <div id="rs-admin-identity-title" class="rs-admin-identity-title col-md-12">
+                        <h1>COMPTE MEMBRE</h1>
+                    </div>
+                    <!-- rs-admin-identity-specs -->
+                    <div id="rs-admin-identity-specs" class="rs-admin-identity-specs col-md-12 rs-no-margin rs-no-padding">
+                        <!-- rs-admin-identity-pic -->
+                        <div id="rs-admin-identity-pic" class="rs-admin-identity-pic col-md-3">
+                            <div id="rs-admin-account-pic" class="rs-admin-account-pic col-md-12"></div>
+                            <!-- l image provient du fichier uploadé -->
+                            <div id="rs-admin-account-upload" class="rs-admin-account-upload col-md-12">
+                                <form>
+                                    <div id="form-group" class="form-group">
+                                        <input type="file" class="form-control-file" id="form-control-file">
+                                        <button type="submit" id="btn btn-primary" class="btn btn-primary">Uploader</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end of rs-admin-identity-pic -->
+
+                        <!--***************************************************** ACCOUNT **************************************************-->
+
+                        <div id="rs-admin-account-specs" class="rs-admin-account-specs col-md-9">
+
+                            <form>
+                                <div id="form-row" class="form-row col-md-12">
+                                    <div id="form-group" class="form-group col-md-6">
+                                        <label for="inputprenom">Prenom</label>
+                                        <input type="text" class="form-control" id="inputprenom" placeholder="Prenom">
+                                    </div>
+                                    <div id="form-group" class="form-group col-md-6">
+                                        <label for="inputnom">Nom</label>
+                                        <input type="text" class="form-control" id="inputnom" placeholder="Nom">
+                                    </div>
+                                </div>
+
+                                <div id="form-row" class="form-row col-md-12">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail4">Pseudo</label>
+                                        <input type="text" class="form-control" id="inputpseudo" placeholder="Pseudo">
+                                    </div>
+
+                                </div>
+
+                                <div id="rs-gender" class="rs-gender col-md-6">
+                                    <label class="col-md-12 rs-no-padding" for="inputGenre">Genre </label>
+                                    <div id="form-check-inline" class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" id="form-check-input" class="form-check-input" value="">Homme
+                                        </label>
+                                    </div>
+                                    <div id="form-check-inline" class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" id="form-check-input" class="form-check-input" value="">Femme
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div id="rs-birth" class="rs-birth col-md-6">
+                                    <div class="well">
+                                        <div id="form-group" class="form-group">
+                                            <label>Date de naissance</label>
+                                            <input type="date" class="form-control" id="rs-birth-input" placeholder="Date de naissance">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="form-row" class="form-row col-md-12">
+                                    <div id="form-group" class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+                                    <div id="form-group" class="form-group col-md-6">
+                                        <label for="inputPassword4">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div id="form-group" class="form-group col-md-12">
+                                    <label for="inputAddress">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+
+
+                                <div id="form-row" class="form-row col-md-12">
+                                    <div id="form-group" class="form-group col-md-6">
+                                        <label for="inputCity">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                    </div>
+
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div>
+                                </div>
+
+                                <!-- <div class="form-group col-md-12">
+                                            <div class="form-check">
+                                            <input id="form-check-input" class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Check me out
+                                            </label>
+                                            </div>
+                                        </div> -->
+
+
+                                <button type="submit" id="rs-admin-btn-modify" class="rs-admin-btn-modify btn btn-primary">Modifier</button>
+                                <button type="submit" id="rs-admin-btn-delete" class="rs-admin-btn-delete btn btn-primary">SUPPRIMER</button>
+
+                            </form>
+
+
+                        </div>
+
+                    </div>
+                    <!-- end of rs-admin-identity-specs -->
+
+                    <!-- rs-admin-preferences -->
+                    <div id="rs-admin-preferences-container" class="rs-admin-preferences-container col-md-12 rs-no-padding rs-no-margin">
+
+                        <div id="rs-admin-preferences-options" class="rs-admin-preferences-options col-md-12 offset-md-3">
+                            <label class="col-md-12" for="inputPreferences">Preferences</label>
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Restaurant
+                                </label>
+                            </div>
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Sports
+                                </label>
+                            </div>
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Rencontre
+                                </label>
+                            </div>
+
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Culture
+                                </label>
+                            </div>
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Restaurant
+                                </label>
+                            </div>
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Sports
+                                </label>
+                            </div>
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Rencontre
+                                </label>
+                            </div>
+
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Culture
+                                </label>
+                            </div>
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Restaurant
+                                </label>
+                            </div>
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Sports
+                                </label>
+                            </div>
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Rencontre
+                                </label>
+                            </div>
+
+                            <div id="form-check-inline" class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" id="form-check-input" class="form-check-input" value="">Culture
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- end of rs-admin-preferences -->
+
+                </div>
+
+                <!--*****************************************************   admin PROFIL **************************************************-->
+
+                <div id="rs-admin-profil-container" class="rs-admin-profil-container col-md-12 rs-no-margin rs-no-padding">
+
+                    <div id="rs-admin-profil-mainTitle" class="rs-admin-profil-mainTitle col-md-12">
+                        <h1>PROFIL</h1>
+                    </div>
+
+                    <div id="rs-admin-profil-commentBloc" class="col-md-12">
+                        <h1>Ecrivez un commentaire à "nomdel'ami"</h1>
+                        <form id="form-search form-inline" class="form-search form-inline">
+                            <div id="input-append" class="input-append">
+                                <input id="rs-admin-profil-commentBloc-input" type="text" class="search-query"
+                                    placeholder="Ecrivez ici votre commentaire" />
+                                <button type="submit" id="btn btn-primary" class="btn btn-primary">Publier</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- rs-admin-profil-identification -->
+                    <div id="rs-admin-profil-identification-container" class="rs-admin-profil-identification-container col-md-12 rs-no-margin rs-no-padding">
+                        <!-- rs-admin-profil-pic-container -->
+                        <div id="rs-admin-profil-pic-container" class="rs-admin-profil-pic-container col-md-3">
+                            <div class="rs-admin-profil-pic-action col-md-12">
+                                <button type="button" id="btn-outline-primary" class="btn btn-outline-primary col-md-12">inviter</button>
+                                <button type="button" id="btn-outline-secondary" class="btn btn-outline-secondary col-md-12">Supprimer</button>
+                                <button type="button" id="btn-outline-success" class="btn btn-outline-success col-md-12">envoyer
+                                    un message</button>
+                                <button type="button" id="btn-outline-danger" class="btn btn-outline-danger col-md-12">chat</button>
+                                <button type="button" id="btn-outline-warning" class="btn btn-outline-warning col-md-12">Warning</button>
+                            </div>
+                        </div>
+                        <!-- end of rs-admin-profil-pic-container -->
+
+                        <div id="rs-admin-profil-specs" class="rs-admin-profil-specs col-md-9">
+                            <div id="rs-admin-profil-naming" class="rs-admin-profil-naming col-md-12">
+                                <div id="rs-admin-profil-surname" class="rs-admin-profil-surname col-md-6">JOHN</div>
+                                <div id="rs-admin-profil-name" class="rs-admin-profil-name col-md-6">DOE</div>
+
+                            </div>
+
+
+
+                            <div id="rs-admin-profil-preferences" class="rs-admin-profil-preferences col-md-12">
+                                <label for="profil-preferences" class="col-md-12">PREFERENCES</label>
+
+                                restaurants sports <br> culture
+
+                            </div>
+
+                            <div id="rs-admin-profil-activity-history" class="rs-admin-profil-activity-history col-md-12 rs-no-padding">
+
+                                <div id="rs-admin-history-btnA" class="rs-admin-history-btnA text-left col-md-6 rs-no-padding">
+                                    <h1>Activités réalisées</h1>
+                                    <span id="rs-admin-history-badge" class="rs-admin-history-badge badge badge-light ">142</span>
+                                </div>
+
+                                <div class="rs-admin-history-btnB text-left col-md-4 rs-no-padding">
+                                    <h1>Lieux visités</h1>
+                                    <span id="rs-admin-history-badge" class="rs-admin-history-badge badge badge-light ">142</span>
+                                </div>
+
+                                <div class="rs-admin-history-btnC text-left col-md-2 rs-no-padding">
+                                    <h1>Amis</h1>
+                                    <span id="rs-admin-history-badge" class="rs-admin-history-badge badge badge-light ">142</span>
+                                </div>
+
+                                <!-- <button type="button" class="rs-admin-history-btnA btn btn-primary text-left  col-md-4">
+                                            Activités réalisées <span class="rs-admin-history-badge badge badge-light">142</span>
+                                        </button>
+                                        <button type="button" class="rs-admin-history-btnB btn btn-primary text-left col-md-4">
+                                            Lieux visités<span class="rs-admin-history-badge badge badge-light">142</span>
+                                        </button>
+                                        <button type="button" class="rs-admin-history-btnC btn btn-primary text-left col-md-4">
+                                            Amis <span class="rs-admin-history-badge badge badge-light">142</span>
+                                        </button> -->
+
+                            </div>
+                            <!-- end of rs-admin-profil-activity-history -->
+
+
+
+
+
+
+
+                        </div>
+                        <!-- end of rs-admin-profil-specs -->
+
+
+
+                    </div>
+                    <!-- end of rs-admin-profil-identification-container -->
+
+                    <div id="rs-admin-profil-activity" class="rs-admin-profil-activity col-md-12">
+                        <h1>ACTIVITE</h1>
+                    </div>
+                    <!-- end of rs-admin-profil-activity -->
+                </div>
+                <!-- end of rs-admin-profil-container -->
+
+
+                <!--***************************************************** FRIENDS **************************************************-->
+
+                <!-- rs-admin-friends-container -->
+                <div id="rs-admin-friends-container" class="rs-admin-friends-container col-md-12 rs-no-margin rs-no-padding">
+
+                    <div id="rs-admin-friends-title" class="rs-admin-friends-title col-md-12">
+                        <h1>AMIS</h1>
+                        <span id="rs-admin-friends-title-badge" class="rs-admin-friends-title-badge badge badge-primary badge-pill">142</span>
+
+                    </div>
+
+                    <!-- DOIT S AFFICHER ICI EN DYNAMIQUE la liste d amis dans un ordre alphabetique croissant -->
+
+                    <div id="rs-admin-friends-list" class="rs-admin-friends-list col-md-12 ">
+
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-message" class="rs-admin-friends-state-message col-md-12">MESSAGE</div>
+                                <div id="rs-admin-friends-state-chat" class="rs-admin-friends-state-chat col-md-12">CHAT</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+                            </div>
+
+                        </div>
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3"></div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="rs-admin-friends-item" class="rs-admin-friends-item col-md-6">
+                            <div id="rs-admin-friends-item-pic" class="rs-admin-friends-item-pic col-md-3">
+
+                            </div>
+                            <div id="rs-admin-friends-item-content" class="rs-admin-friends-item-content col-md-6 rs-no-margin rs-no-padding">
+                                <div id="rs-admin-friends-item-surname"> class="rs-admin-friends-item-surname col-md-6
+                                    ">Prénom</div>
+                                <div id="rs-admin-friends-item-name" class="rs-admin-friends-item-name col-md-6">Nom</div>
+                                <div id="rs-admin-friends-item-mutualFriends" class="rs-admin-friends-item-mutualFriends col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-mutualFriends-nbr" class="rs-admin-friends-mutualFriends-nbr col-md-3">7</div>
+                                    <h1 id="rs-admin-friends-mutualFriends-text" class="rs-admin-friends-mutualFriends-text col-md-9">
+                                        ami(s) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonPlace" class="rs-admin-friends-item-commonPlace col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonPlace-nbr" class="rs-admin-friends-commonPlace-nbr col-md-3">3</div>
+                                    <h1 id="rs-admin-friends-commonPlace-text" class="rs-admin-friends-commonPlace-text col-md-9">
+                                        lieu(x) en commun</h1>
+                                </div>
+                                <div id="rs-admin-friends-item-commonActivity" class="rs-admin-friends-item-commonActivity col-md-12 rs-no-margin rs-no-padding">
+                                    <div id="rs-admin-friends-commonActivity-nbr" class="rs-admin-friends-commonActivity-nbr col-md-3">5</div>
+                                    <h1 id="rs-admin-friends-commonActivity-text" class="rs-admin-friends-commonActivity-text col-md-9">
+                                        activité(s) en commun</h1>
+                                </div>
+                            </div>
+                            <div id="rs-admin-friends-item-state" class="rs-admin-friends-item-state col-md-3">
+                                <div id="rs-admin-friends-state-onoffline" class="rs-admin-friends-state-onoffline col-md-12">Online</div>
+                                <div id="rs-admin-friends-state-delete" class="rs-admin-friends-state-delete col-md-12">SUPPRIMER</div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!-- end of rs-admin-friends-container -->
+
+
+
+                <div id="rs-admin-members-statsBloc" class="rs-admin-members-statsBloc col-md-12">
+                    <label class="col-md-12 rs-admin-members-statsBloc-title" for="inputPreferences">STATISTIQUES</label>
+
+
+
+
+                    <div id="rs-admin-members-statsBloc-view" class="rs-admin-members-statsBloc-view col-md-12">
+                        <button type="button" id="rs-admin-members-statsBloc-view-btn" class="rs-admin-members-statsBloc-view-btn btn btn-primary text-left rs-no-margin rs-no-padding">
+                            VUES : <span id="rs-admin-members-statsBloc-view-badge" class="rs-admin-members-statsBloc-view-badge badge badge-light">1253</span>
+                        </button>
+                    </div>
+
+                    <div id="rs-admin-members-statsBloc-like" class="rs-admin-members-statsBloc-like col-md-12">
+                        <button type="button" id="rs-admin-members-statsBloc-like-btn" class="rs-admin-members-statsBloc-like-btn btn btn-primary text-left rs-no-margin rs-no-padding">
+                            LIKES : <span id="rs-admin-members-statsBloc-like-badge" class="rs-admin-members-statsBloc-like-badge badge badge-light">726</span>
+                        </button>
+
+                    </div>
+
+                    <div id="rs-admin-members-statsBloc-places" class="rs-admin-members-statsBloc-places col-md-12">
+                        <button type="button" id="rs-admin-members-statsBloc-places-btn" class="rs-admin-members-statsBloc-places-btn btn btn-primary text-left rs-no-margin rs-no-padding">
+                            LIEUX VISITES : <span id="rs-admin-members-statsBloc-places-badge" class="rs-admin-members-statsBloc-places-badge badge badge-light">142</span>
+                        </button>
+
+                    </div>
+
+                    <div id="rs-admin-members-statsBloc-client" class="rs-admin-members-statsBloc-client col-md-12">
+                        <button type="button" id="rs-admin-members-statsBloc-client-btn" class="rs-admin-members-statsBloc-client-btn btn btn-primary text-left rs-no-margin rs-no-padding">
+                            OCCUPATIONS REALISEES : <span id="rs-admin-members-statsBloc-client-badge" class="rs-admin-members-statsBloc-client-badge badge badge-light">142</span>
+                        </button>
+
+                    </div>
+
+
+                </div>
+                <!-- end of rs-admin-members-statsBloc -->
+
+            </div>
+
+            <!-- end fo middlebloc -->
+
+
+
+
+
+            </div>
+            <!-- end of rs-middleBloc -->
+
+
+
+            <!-- rs-admin-aside-members -->
+            <div id="rs-admin-aside-members-container" class="rs-admin-aside-members-container col-md-2 ">
+
+
+                <div id="rs-admin-aside-members-title" class="rs-admin-aside-members-title col-md-12">
+                    <!-- <button type="button" class="rs-admin-aside-members-btn btn btn-primary text-left rs-no-margin rs-no-padding">
+                                 
+                            </button> -->
+                    <h1>Membres</h1>
+
+                </div>
+
+                <div id="rs-admin-aside-members-input-group" class="rs-admin-aside-members-input-group input-group mb-3">
+                    <input type="text" class="form-control rs-no-padding" placeholder="Philip" aria-label="Recipient's username"
+                        aria-describedby="basic-addon2">
+                    <div id="input-group-append" class="input-group-append">
+                        <button id="btn-outline-secondary" class="btn btn-outline-secondary" type="button">OK</button>
+                    </div>
+                </div>
+
+                <div id="rs-admin-aside-members" class="rs-admin-aside-members col-md-12 rs-no-margin" id="id-scrollbar-Style">
+
+                    <ul id="rs-admin-members-listGroup" class="rs-admin-members-listGroup  list-group col-md-12 rs-no-padding rs-no-margin">
+
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Philip Morris
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Philippot Florian
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Doe Philippe
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Zalorian Philippe
+                        </li>
+
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Philip Morris
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Philippot Florian
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Doe Philippe
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Zalorian Philippe
+                        </li>
+
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Philip Morris
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Philippot Florian
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Doe Philippe
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Zalorian Philippe
+                        </li>
+
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Philip Morris
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Philippot Florian
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Doe Philippe
+                        </li>
+                        <li id="rs-admin-members-listGroupItem list-group-item" class="rs-admin-members-listGroupItem list-group-item d-flex justify-content-between align-items-center rs-no-padding rs-no-margin">
+                            Zalorian Philippe
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <button type="button" id="btn btn-secondary" class="btn btn-secondary col-md-12">ADMIN MESSAGES</button>
+                <button type="button" id="btn btn-secondary" class="btn btn-secondary col-md-12">ADMIN CHAT</button>
+
+
+
+
+
+            </div>
+            <!-- end of rs-admin-aside-members -->
+
+
+        </section>
+        <!-- end of MAIN SECTION -->
+
+
+        <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER  -->
+
+        <div id="includedFooter" class="col-md-12 rs-no-padding rs-no-margin"></div>
+
+        <!-- END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER END OF FOOTER   -->
+
+
+
+    </section>
+    <!-- END MAIN CONTAINER -->
+
+</body>
+
+</html>

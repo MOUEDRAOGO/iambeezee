@@ -1,0 +1,70 @@
+/************************* CSS DE LA PAGE CHAT  *******************************************************************/
+
+#rs-chat-main{
+	position: fixed;
+	width: 270px;
+	bottom: 0;
+	right: 200px;
+}
+#rs-chat-header{
+	background: #4267B2;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+#rs-chat-username i{
+	font-size: 9px;
+}
+#rs-chat-username h6{
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 600;
+}
+#rs-chat-options i{
+	font-size: 14px;
+    font-weight: normal;
+    opacity: 0.7;
+}
+#rs-chat-options .live-video{
+	font-size: 6px;
+}
+.chats{
+	height: 260px;
+	overflow-x: scroll;
+	overflow-x: hidden;
+}
+.chats ul li{
+	list-style: none;
+	clear: both;
+	font-size: 13px;
+}
+.chats .send-msg{
+	float: right;
+}
+#rs-chat-receive-msg img{
+	border-radius: 100%;
+	height: 30px;
+	width: 12%;
+}
+#rs-chat-receive-msg-img{
+	display: inline;
+}
+#rs-chat-receive-msg #rs-chat-receive-msg-desc{
+	display: inline-block;
+}
+#rs-chat-receive-msg #rs-chat-receive-msg-desc p{
+	background: #c1c1c1;
+}
+#rs-chat-message-box input{
+	border: none;
+	font-size: 13px;
+	opacity: 0.7;
+}
+#rs-chat-message-box input:focus{
+	outline: none;
+}
+#rs-chat-tools i{
+	color: #a1a1a1;
+	cursor: pointer;
+	font-size: 20px;
+	margin-right: 6px;
+}

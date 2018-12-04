@@ -1,0 +1,106 @@
+
+
+
+
+/*****************************
+
+******* rs-aside-friends *******
+
+*****************************/
+
+.rs-aside-friends{
+    height: 750px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: orangered; */
+    /* background-color: #006600; */
+    background-color: #FF0000;
+    /* border: black solid 0.5px; */
+}
+
+.rs-asideFriends-friends{
+    height: 375px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+
+    /* background-color: orangered; */
+    /* border: black solid 0.5px; */
+}
+
+.rs-aside-friends-btn{
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px; 
+    /* background-color: rgb(255, 0, 0) !important; */
+
+}
+
+/* .rs-aside-friends-badge{
+    padding-left: 9px;
+    margin-left: 43px;
+    margin-top: 16px;
+} */
+
+.rs-aside-friends-badge{
+    top: 5px !important;
+    left: 122px;
+    font-size: 1rem;
+}
+
+.rs-friends-connected-listGroupItem, .rs-members-connected-listGroupItem{
+    border: none;
+}
+
+.rs-asideFriends-title h1{
+    font-size: 1.5rem;
+}
+
+.rs-aside-friends-connected{
+    height: 250px;
+    /* padding-right: 0px !important; */
+    overflow-y: auto;
+    /* border: black solid 1px; */
+}
+
+.rs-aside-friends-connected-listGroup{
+    /* overflow-y: auto; */
+}
+
+.rs-asideFriends-members{
+    height: 350px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: orangered; */
+    /* border: black solid 0.5px; */
+}
+
+.rs-aside-members-connected{
+    height: 261px;
+    padding-right: 0px !important;
+    overflow-y: auto;
+    /* border: black solid 1px; */
+}
+
+.rs-members-invitationSend{
+    height: 300px;
+    font-size: 1.5rem;
+    display: none;
+}

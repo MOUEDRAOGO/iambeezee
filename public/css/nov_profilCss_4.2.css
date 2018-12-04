@@ -1,0 +1,575 @@
+/************************* CSS DE LA PAGE PROFIL RESEAU SOCIAL profil_reseausocial.html *******************************************************************/
+
+.rs-profil-container{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+}
+
+
+#rs-profil-commentBloc{
+
+    margin-bottom: 20px;
+    background-color: beige;
+}
+
+#rs-profil-commentBloc h1{
+    font-size: 1rem;
+    padding-top: 17px;
+}
+
+
+.input { 
+    text-align: left; 
+}
+
+#rs-profil-commentBloc-input {
+    padding-left:0px;
+    width: 800px;
+}
+
+/* .form.form-search {
+    position: relative;
+    top: 11px;
+    padding-left: 65px;
+} */
+
+/* form.form-search:before {
+    content:'';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url(http://getbootstrap.com/2.3.2/assets/img/glyphicons-halflings.png);
+    background-position: -48px 0;
+    position: absolute;
+    top:8px;
+    left:70px;
+    opacity: .5;
+    z-index: 1000;
+} */
+
+
+.rs-profil-mainTitle{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px;
+
+}
+
+.rs-profil-mainTitleh1{
+    height: 100%;
+   font-size: 2rem;
+}
+
+
+.rs-profil-pic-container{
+    /* width: 100%; */
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+
+.rs-profil-pic{
+    /* width: 100%; */
+    height: 300px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+    overflow: hidden;
+    object-fit:cover;
+
+    /* background-image: url('https://loremflickr.com/1200/400/portrait'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 0.5px; 
+
+}
+
+.rs-profil-specs{
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+}
+
+.rs-profil-naming{
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+}
+
+.rs-profil-surname{
+    top: 25px;
+    font-size: 2rem;
+}
+
+.rs-profil-name{
+    top: 25px;
+    font-size: 2rem;
+}
+
+
+.rs-profil-preferences{
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+}
+
+.rs-profil-activity-history{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+.rs-history-btnA{
+    /* margin-left: 10px;
+    margin-right: 5px; */
+    padding: 0px;
+}
+
+.rs-history-btnB{
+    /* margin-left: 5px;
+    margin-right: 5px; */
+    padding: 0px;
+}
+
+
+.rs-history-btnC{
+    /* margin-left: 5px;
+    margin-right: 10px; */
+    padding: 0px;
+}
+
+
+
+
+
+.rs-profil-favoriteOccupations-container{
+
+    height: 561px;
+    padding-right: 0px !important;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: black solid 1px;
+}
+
+.rs-profil-favoriteOccupationsTop-title, .rs-profil-favoriteOccupationsMiddle-title, .rs-profil-favoriteOccupationsBottom-title{
+    height: 40px;
+    /* background-color: red; */
+
+}
+.rs-profil-favoriteOccupationsTop-title h1, .rs-profil-favoriteOccupationsMiddle-title h1, .rs-profil-favoriteOccupationsBottom-title h1{
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+}
+
+.rs-profil-advertOccupationsTop, .rs-profil-advertOccupationsLast{
+    height: 250px;
+    /* background-color: yellow; */
+    padding-bottom: 20px;
+}
+
+.rs-profil-favoriteOccupationsTop, .rs-profil-favoriteOccupationsMiddle, .rs-profil-favoriteOccupationsBottom{
+    height: 250px;
+    /* background-color: yellow; */
+    /* padding-bottom: 20px; */
+}
+
+
+.rs-profil-favoriteOccupationsTop-containerA, .rs-profil-favoriteOccupationsMiddle-containerA, .rs-profil-favoriteOccupationsBottom-containerA{
+    height: 100%;
+    border: black solid 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.rs-profil-favoriteOccupationsTop-imageA, .rs-profil-favoriteOccupationsTop-imageB, .rs-profil-favoriteOccupationsTop-imageC, .rs-profil-favoriteOccupationsTop-imageD, .rs-profil-favoriteOccupationsTop-imageE, .rs-profil-favoriteOccupationsTop-imageF, .rs-profil-favoriteOccupationsMiddle-imageA, .rs-profil-favoriteOccupationsMiddle-imageB, .rs-profil-favoriteOccupationsMiddle-imageC, .rs-profil-favoriteOccupationsMiddle-imageD, .rs-profil-favoriteOccupationsMiddle-imageE, .rs-profil-favoriteOccupationsMiddle-imageF, .rs-profil-favoriteOccupationsBottom-imageA, .rs-profil-favoriteOccupationsBottom-imageB, .rs-profil-favoriteOccupationsBottom-imageC, .rs-profil-favoriteOccupationsBottom-imageD, .rs-profil-favoriteOccupationsBottom-imageE, .rs-profil-favoriteOccupationsBottom-imageF{
+    height: 50%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+}
+
+.rs-profil-favoriteOccupationsTop-imageA, .rs-profil-favoriteOccupationsMiddle-imageA, .rs-profil-favoriteOccupationsBottom-imageA{
+    /* background-image: url('https://loremflickr.com/320/150/sea'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 1px;
+}
+
+.rs-profil-favoriteOccupationsTop-textA, .rs-profil-favoriteOccupationsTop-textB, .rs-profil-favoriteOccupationsTop-textC, .rs-profil-favoriteOccupationsTop-textD, .rs-profil-favoriteOccupationsTop-textE, .rs-profil-favoriteOccupationsTop-textF, .rs-profil-favoriteOccupationsMiddle-textA, .rs-profil-favoriteOccupationsMiddle-textB, .rs-profil-favoriteOccupationsMiddle-textC, .rs-profil-favoriteOccupationsMiddle-textD, .rs-profil-favoriteOccupationsMiddle-textE, .rs-profil-favoriteOccupationsMiddle-textF, .rs-profil-favoriteOccupationsBottom-textA, .rs-profil-favoriteOccupationsBottom-textB, .rs-profil-favoriteOccupationsBottom-textC, .rs-profil-favoriteOccupationsBottom-textD, .rs-profil-favoriteOccupationsBottom-textE, .rs-profil-favoriteOccupationsBottom-textF{
+    height: 50%;
+    border: black solid 1px;
+    padding: 5px;
+}
+
+
+.rs-profil-favoriteOccupationsTop-textName h1, .rs-favoriteOccupationsMiddle-textName h1{
+    font-size: 0.7rem;
+    border: black solid 1px;
+    margin-bottom: .2rem;
+
+}
+
+.rs-profil-favoriteOccupationsTop-duration h1, .rs-favoriteOccupationsMiddle-duration h1{
+    font-size: 0.7rem;
+    border: black solid 1px;
+    margin-bottom: .2rem;
+
+}
+
+.rs-profil-favoriteOccupationsTop-duration-time h1, .rs-favoriteOccupationsMiddle-duration-time h1{
+    font-size: 0.7rem;
+    border: black solid 1px;
+    margin-bottom: .2rem;
+
+}
+
+/* A GARDER */
+/* .rs-favoriteOccupationsTop-itemMembersParticipation h1, .rs-favoriteOccupationsMiddle-itemMembersParticipation h1{
+    font-size: 1rem;
+    border: black solid 1px;
+
+}
+.rs-favoriteOccupationsTop-itemMembersParticipation-badge, .rs-favoriteOccupationsMiddle-itemMembersParticipation-badge{
+    font-size: 1rem;
+    border: black solid 1px;
+
+} */
+
+.rs-profil-favoriteOccupationsTop-itemMutualOcupations h1, .rs-favoriteOccupationsMiddle-itemMutualOcupations h1{
+    font-size: 0.7rem;
+    border: black solid 1px;
+    margin-bottom: .2rem;
+
+}
+.rs-profil-favoriteOccupationsTop-itemMutualOcupations-badge, .rs-favoriteOccupationsMiddle-itemMutualOcupations-badge{
+    font-size: 0.7rem;
+    border: black solid 1px;
+    margin-bottom: .2rem;
+
+}
+
+.rs-profil-favoriteOccupationsTop-duration-choice, .rs-favoriteOccupationsMiddle-duration-choice{
+    width: 100%;
+    font-size: 0.8rem;
+    /* border: black solid 1px; */
+    /* margin-bottom: .2rem; */
+}
+
+.rs-profil-favoriteOccupationsTop-containerB, .rs-profil-favoriteOccupationsMiddle-containerB, .rs-profil-favoriteOccupationsBottom-containerB{
+    height: 100%;
+    border: black solid 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.rs-profil-favoriteOccupationsTop-imageB, .rs-profil-favoriteOccupationsMiddle-imageB, .rs-profil-favoriteOccupationsBottom-imageB{
+    /* background-image: url('https://loremflickr.com/320/150/ski'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 1px;
+}
+
+.rs-profil-favoriteOccupationsTop-containerC, .rs-profil-favoriteOccupationsMiddle-containerC, .rs-profil-favoriteOccupationsBottom-containerC{
+    height: 100%;
+    border: black solid 1px;
+    padding-right: 5px;
+    padding-left:5px;
+}
+
+.rs-profil-favoriteOccupationsTop-imageC, .rs-profil-favoriteOccupationsMiddle-imageC, .rs-profil-favoriteOccupationsBottom-imageC{
+    /* background-image: url('https://loremflickr.com/320/150/tennis'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 1px;
+}
+
+.rs-profil-favoriteOccupationsTop-containerD, .rs-profil-favoriteOccupationsMiddle-containerD, .rs-profil-favoriteOccupationsBottom-containerD{
+    height: 100%;
+    border: black solid 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.rs-profil-favoriteOccupationsTop-imageD, .rs-profil-favoriteOccupationsMiddle-imageD, .rs-profil-favoriteOccupationsBottom-imageD{
+    /* background-image: url('https://loremflickr.com/320/150/hotel'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 1px;
+}
+
+.rs-profil-favoriteOccupationsTop-containerE, .rs-profil-favoriteOccupationsMiddle-containerE, .rs-profil-favoriteOccupationsBottom-containerE{
+    height: 100%;
+    border: black solid 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.rs-profil-favoriteOccupationsTop-imageE, .rs-profil-favoriteOccupationsMiddle-imageE, .rs-profil-favoriteOccupationsBottom-imageE{
+    /* background-image: url('https://loremflickr.com/320/150/batman'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 1px;
+}
+
+.rs-profil-favoriteOccupationsTop-containerF, .rs-profil-favoriteOccupationsMiddle-containerF, .rs-profil-favoriteOccupationsBottom-containerF{
+    height: 100%;
+    border: black solid 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.rs-profil-favoriteOccupationsTop-imageF, .rs-profil-favoriteOccupationsMiddle-imageF, .rs-profil-favoriteOccupationsBottom-imageF{
+    /* background-image: url('https://loremflickr.com/320/150/backyard'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: black solid 1px;
+}
+
+.rs-profil-activity{
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: black solid 0.5px; 
+
+}
+
+.rs-profil-activity-history h1{
+    font-size: 1.5rem;
+}
+
+.rs-history-btn{
+    width: 227px;
+    font-size: 1.5rem;
+
+}
+
+.rs-history-badge{
+    top: 0px;
+    left: 163px;
+    font-size: 1rem;
+}
+
+/*
+.rs-profil-friends-list{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 5px;
+    padding-bottom: 10px !important;
+    border: black solid 0.5px; 
+
+}
+.rs-profil-friends-item{
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+.rs-profil-friends-item-pic{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+
+    
+
+    background-image: url('https://loremflickr.com/320/150/faceportrait');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit:cover;
+}
+
+.rs-profil-friends-item-content{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+.rs-profil-friends-item-surname, .rs-profil-friends-item-name{
+    font-size: 1rem;
+}
+
+
+.rs-identification-state-badge{
+    margin-top: 13px;
+}
+
+
+.rs-identification-friends-invitationSend{
+    height: 300px;
+    font-size: 1.5rem;
+    display: none;
+} */
+
+
+
+
+/*****************************
+
+* PROFIL friends- container *
+
+*****************************/
+
+
+
+.rs-profil-friends-container{
+    height: 571px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    margin-bottom: 20px;
+    padding: 0px 0px;
+    border: purple solid 0.5px; 
+
+}
+
+.rs-profil-friends-title {
+    height: 50px;
+    font-size: 1rem;
+
+}
+.rs-profil-friends-title-badge {
+    font-size: 1.5rem;
+    padding-left: 9px;
+    margin-left: 14px;
+    margin-top: 7px;
+}
+
+.rs-profil-friends-list{
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+    /* overflow: auto; */
+    overflow-y: auto
+
+}
+.rs-profil-friends-item{
+    height: 105px;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+.rs-profil-friends-item-pic{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+
+    
+
+    /* background-image: url('https://loremflickr.com/320/150/faceportrait'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit:cover;
+}
+
+.rs-profil-friends-item-content{
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    border: black solid 0.5px; 
+}
+
+.rs-profil-friends-item-surname, .rs-profil-friends-item-name{
+    font-size: 1.5rem;
+}
+
+.rs-profil-friends-item-mutualFriends h1, .rs-profil-friends-item-commonPlace h1, .rs-profil-friends-item-commonActivity h1{
+    font-size: 0.8rem;
+}
+
+.rs-profil-friends-mutualFriends-nbr, .rs-profil-friends-commonPlace-nbr, .rs-profil-friends-commonActivity-nbr{
+    font-size: 0.8rem;
+}
+
+.rs-profil-friends-item-state{
+    padding-left: 5px;
+}
+
+.rs-profil-friends-state-onoffline:hover{
+    color: blue;
+
+}
+.rs-profil-friends-state-message, .rs-profil-friends-state-chat, .rs-profil-friends-state-delete{
+    border: blue 0.5px;
+    color: blue;
+    font-size: 0.8rem;
+}
+
+.rs-profil-friends-state-message:hover, .rs-profil-friends-state-chat:hover, .rs-profil-friends-state-delete:hover{
+    border:white solid 0.5px;
+    color: white;
+    background-color: red;
+}
+
+.rs-friends-recommendationSend, .rs-identification-friends-invitationSend, .rs-friends-invitationSend{
+    display: none;
+}
